@@ -28,9 +28,18 @@ export function MetalParts() {
               Ei pelkästään<br />
               <span className="text-accent">vanteille</span>.
             </h2>
-            <p className="font-mono text-[9px] md:text-sm text-foreground/60 max-w-md leading-relaxed">
+            <p className="font-mono text-[9px] md:text-sm text-foreground/60 max-w-md leading-relaxed mb-3 md:mb-5">
               Tärykiillotus, jauhemaalaus ja muut pintakäsittelyt soveltuvat myös monille auton, moottoripyörän ja teollisuuden metalliosille.
             </p>
+            <a
+              href="#galleria"
+              className="inline-flex items-center gap-2 font-mono text-[10px] md:text-[11px] text-foreground/60 hover:text-foreground border border-foreground/20 hover:border-foreground px-4 py-2 tracking-[0.15em] uppercase transition-colors"
+            >
+              Katso töitämme
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
           </div>
 
           {/* Right: Image */}

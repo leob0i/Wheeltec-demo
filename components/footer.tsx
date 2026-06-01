@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function Footer() {
   const marqueeRef = useRef<HTMLDivElement>(null)
@@ -43,12 +44,13 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-3 md:mb-6">
-              <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-accent" />
-              <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] md:tracking-[0.3em] text-foreground uppercase">
-                WheelTec
-              </span>
-            </div>
+            <Image
+              src="/images/wt.logo.png"
+              alt="WheelTec"
+              width={160}
+              height={48}
+              className="h-20 md:h-28 w-auto object-contain mb-0 md:mb-1 -ml-1"
+            />
             <p className="font-mono text-[10px] text-muted-foreground leading-relaxed">
               Laatu. Tarkkuus. Tulos.
               <br />

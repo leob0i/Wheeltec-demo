@@ -45,6 +45,7 @@ function d(ms: number): React.CSSProperties {
 export function Hero() {
   const [go, setGo] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [palvelutOpen, setPalvelutOpen] = useState(false)
 
   useEffect(() => {
     const t = requestAnimationFrame(() => setGo(true))
@@ -106,12 +107,41 @@ export function Hero() {
         </div>
 
         <div className="hidden lg:flex items-center gap-10">
-          {["Palvelut", "Hinnasto", "Galleria", "Yhteystiedot"].map((item, i) => (
+          {/* Palvelut dropdown */}
+          <div
+            className="relative anim-cut-in"
+            style={d(200)}
+            onMouseEnter={() => setPalvelutOpen(true)}
+            onMouseLeave={() => setPalvelutOpen(false)}
+          >
+            <button className="group relative font-mono text-[11px] tracking-[0.25em] text-foreground/50 hover:text-foreground transition-colors uppercase flex items-center gap-1.5">
+              Palvelut
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className={`transition-transform duration-200 ${palvelutOpen ? "rotate-180" : ""}`} aria-hidden="true">
+                <path d="M1 2l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full" />
+            </button>
+            <div className={`absolute top-full left-0 pt-3 transition-all duration-200 ${palvelutOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"}`}>
+              <div className="bg-background/95 backdrop-blur-sm border border-foreground/10 py-2 min-w-[160px]">
+                {["Kiilloitus", "Maalaus", "Oikaisu", "Maalinpoisto"].map((sub) => (
+                  <a
+                    key={sub}
+                    href="#palvelut"
+                    className="block px-4 py-2 font-mono text-[10px] tracking-[0.2em] text-foreground/50 hover:text-accent hover:bg-foreground/5 transition-colors uppercase"
+                  >
+                    {sub}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* Muut linkit */}
+          {["Hinnasto", "Galleria", "Yhteystiedot"].map((item, i) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="group relative font-mono text-[11px] tracking-[0.25em] text-foreground/50 hover:text-foreground transition-colors uppercase anim-cut-in"
-              style={d(200 + i * 60)}
+              style={d(260 + i * 60)}
             >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full" />
@@ -121,7 +151,7 @@ export function Hero() {
 
         <div className="flex items-center gap-2 md:gap-4">
           <span className="font-mono text-[9px] text-foreground/30 hidden md:block tracking-[0.15em] anim-cut-in" style={d(300)}>
-            EST. 2012
+            EST. 2024
           </span>
           <a
             href="#yhteystiedot"
@@ -159,14 +189,22 @@ export function Hero() {
           <span className="w-5 h-[1.5px] bg-foreground block rotate-45 absolute" />
           <span className="w-5 h-[1.5px] bg-foreground block -rotate-45 absolute" />
         </button>
-        {["Palvelut", "Hinnasto", "Galleria", "Yhteystiedot"].map((item) => (
+        {[
+          { label: "Kiilloitus",    href: "#palvelut" },
+          { label: "Maalaus",       href: "#palvelut" },
+          { label: "Oikaisu",       href: "#palvelut" },
+          { label: "Maalinpoisto",  href: "#palvelut" },
+          { label: "Hinnasto",      href: "#hinnasto" },
+          { label: "Galleria",      href: "#galleria" },
+          { label: "Yhteystiedot",  href: "#yhteystiedot" },
+        ].map((item) => (
           <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+            key={item.label}
+            href={item.href}
             onClick={() => setMenuOpen(false)}
             className="font-sans text-4xl tracking-tighter text-foreground uppercase hover:text-accent transition-colors min-h-[48px] flex items-center"
           >
-            {item}
+            {item.label}
           </a>
         ))}
       </div>

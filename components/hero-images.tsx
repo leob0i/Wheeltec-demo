@@ -75,9 +75,6 @@ export function HeroImages() {
               Palvelut
             </span>
           </div>
-          <span className="font-mono text-[7px] md:text-[10px] text-muted-foreground tracking-[0.15em] hidden md:block">
-            004 NÄKYMÄÄ
-          </span>
         </div>
       </div>
 
@@ -115,9 +112,6 @@ export function HeroImages() {
                     <div className="absolute bottom-0 left-0 w-full h-[3px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-left" />
                     <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-accent/0 group-hover:border-accent transition-colors duration-300" />
                     <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-accent/0 group-hover:border-accent transition-colors duration-300" />
-                    <span className={`absolute top-3 right-3 font-mono text-foreground/30 group-hover:text-accent transition-colors duration-300 tracking-widest ${img.labelLine2 ? "text-base" : "text-[10px]"}`}>
-                      0{i + 1}
-                    </span>
                   </div>
                   <div className="mt-4 flex items-center justify-between">
                     <span className={`font-sans text-foreground/70 group-hover:text-foreground transition-colors duration-300 tracking-tight ${img.labelLine2 ? "text-base lg:text-xl leading-tight" : "text-2xl lg:text-3xl"}`}>
@@ -160,9 +154,6 @@ export function HeroImages() {
                   />
                   <div className="absolute inset-0 bg-background/40" />
                   <div className="absolute bottom-0 left-0 w-full h-[2px] bg-accent" />
-                  <span className={`absolute top-1.5 right-1.5 font-mono text-foreground/40 tracking-widest ${img.labelLine2 ? "text-[11px]" : "text-[7px]"}`}>
-                    0{i + 1}
-                  </span>
                 </div>
                 <span className={`mt-1.5 block font-sans text-foreground/70 tracking-tight ${img.labelLine2 ? "text-sm leading-tight" : "text-sm"}`}>
                   {img.label}{img.labelLine2 && <><br />{img.labelLine2}</>}
