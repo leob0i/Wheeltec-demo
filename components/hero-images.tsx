@@ -5,27 +5,28 @@ import Image from "next/image"
 
 const images = [
   {
-    src: "/images/grid-strength.jpg",
-    alt: "Chalk-covered hands gripping a heavy barbell with intense focus",
-    label: "STRENGTH",
+    src: "/images/kiilloitus.jpeg",
+    alt: "Kiiltävä tärykiillotettu vanne lähikuvassa",
+    label: "KIILLOTUS",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/grid-endurance.jpg",
-    alt: "Athlete performing rope climbs in an industrial CrossFit gym",
-    label: "ENDURANCE",
+    src: "/images/maalaus.jpeg",
+    alt: "Jauhemaalattu vanne ennen ja jälkeen käsittelyn",
+    label: "MAALAUS",
     aspect: "aspect-[4/5]",
   },
   {
-    src: "/images/grid-grit.jpg",
-    alt: "CrossFit athlete resting between sets in a raw warehouse gym",
-    label: "GRIT",
+    src: "/images/vanneoikaisu.png",
+    alt: "Hiekkapuhallettu vanne valmiina käsittelyyn",
+    label: "OIKAISU",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/grid-power.jpg",
-    alt: "Explosive box jump captured mid-air with dramatic lighting",
-    label: "POWER",
+    src: "/images/sandblasting.jpg",
+    alt: "Oikaistu ja kiillotettu vanne valmiina toimitukseen",
+    label: "Hiekkapuhallus /",
+    labelLine2: "Kemiallinen maalinpoisto",
     aspect: "aspect-[4/5]",
   },
 ]
@@ -71,11 +72,11 @@ export function HeroImages() {
           <div className="flex items-center gap-2 md:gap-4">
             <div className="w-5 md:w-8 h-[2px] bg-accent" />
             <span className="font-mono text-[8px] md:text-[10px] text-accent tracking-[0.2em] md:tracking-[0.4em] uppercase">
-              The Work Speaks
+              Palvelut
             </span>
           </div>
           <span className="font-mono text-[7px] md:text-[10px] text-muted-foreground tracking-[0.15em] hidden md:block">
-            004 FRAMES
+            004 NÄKYMÄÄ
           </span>
         </div>
       </div>
@@ -107,19 +108,20 @@ export function HeroImages() {
                       src={img.src || "/placeholder.svg"}
                       alt={img.alt}
                       fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                      className="object-cover transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-background/30 group-hover:bg-background/0 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-background/40 group-hover:bg-background/0 transition-colors duration-500"
+                    />
                     <div className="absolute bottom-0 left-0 w-full h-[3px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-left" />
                     <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-accent/0 group-hover:border-accent transition-colors duration-300" />
                     <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-accent/0 group-hover:border-accent transition-colors duration-300" />
-                    <span className="absolute top-3 right-3 font-mono text-[10px] text-foreground/30 group-hover:text-accent transition-colors duration-300 tracking-widest">
+                    <span className={`absolute top-3 right-3 font-mono text-foreground/30 group-hover:text-accent transition-colors duration-300 tracking-widest ${img.labelLine2 ? "text-base" : "text-[10px]"}`}>
                       0{i + 1}
                     </span>
                   </div>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="font-sans text-2xl lg:text-3xl text-foreground/70 group-hover:text-foreground transition-colors duration-300 tracking-tight">
-                      {img.label}
+                    <span className={`font-sans text-foreground/70 group-hover:text-foreground transition-colors duration-300 tracking-tight ${img.labelLine2 ? "text-base lg:text-xl leading-tight" : "text-2xl lg:text-3xl"}`}>
+                      {img.label}{img.labelLine2 && <><br />{img.labelLine2}</>}
                     </span>
                     <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="w-4 h-[1px] bg-accent" />
@@ -154,16 +156,16 @@ export function HeroImages() {
                     src={img.src || "/placeholder.svg"}
                     alt={img.alt}
                     fill
-                    className="object-cover grayscale"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-background/15" />
+                  <div className="absolute inset-0 bg-background/40" />
                   <div className="absolute bottom-0 left-0 w-full h-[2px] bg-accent" />
-                  <span className="absolute top-1.5 right-1.5 font-mono text-[7px] text-foreground/40 tracking-widest">
+                  <span className={`absolute top-1.5 right-1.5 font-mono text-foreground/40 tracking-widest ${img.labelLine2 ? "text-[11px]" : "text-[7px]"}`}>
                     0{i + 1}
                   </span>
                 </div>
-                <span className="mt-1.5 block font-sans text-sm text-foreground/70 tracking-tight">
-                  {img.label}
+                <span className={`mt-1.5 block font-sans text-foreground/70 tracking-tight ${img.labelLine2 ? "text-sm leading-tight" : "text-sm"}`}>
+                  {img.label}{img.labelLine2 && <><br />{img.labelLine2}</>}
                 </span>
               </div>
             </div>

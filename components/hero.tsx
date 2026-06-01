@@ -60,25 +60,27 @@ export function Hero() {
 
   return (
     <section className="relative h-[100svh] flex flex-col overflow-hidden bg-background select-none">
-      {/* ── Background image ── */}
+      {/* ── Background video ── */}
       <div className="absolute inset-0 anim-cut-in" style={d(100)} aria-hidden="true">
-        <Image
-          src="/images/hero-main.jpg"
-          alt="CrossFit athlete in an industrial gym"
-          fill
-          priority
-          className="object-cover object-[65%_15%] sm:object-[70%_20%] md:object-center"
+        <video
+          src="/images/herowt.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Mobile: heavier bottom gradient so text pops, lighter top so image breathes */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent md:hidden" />
-        <div className="absolute inset-0 bg-background/20 md:hidden" />
-        {/* Desktop: side + bottom gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/50 to-background/20 hidden md:block" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent hidden md:block" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent md:hidden" />
+        <div className="absolute inset-0 bg-background/10 md:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/30 to-background/5 hidden md:block" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/25 to-transparent hidden md:block" />
       </div>
 
       {/* Accent shard */}
-      <div className="absolute top-[8%] md:top-[15%] left-0 w-[3px] h-[12vh] md:h-[40vh] bg-accent anim-grow-down z-10" style={d(400)} />
+      <div
+        className="absolute top-[8%] md:top-[15%] left-0 w-[3px] h-[12vh] md:h-[40vh] anim-grow-down z-10"
+        style={{ ...d(400), background: "linear-gradient(180deg, #00F5C8, #00D9FF, #009DFF)" }}
+      />
 
       {/* Grid lines desktop */}
       {[14, 28, 42].map((pos, i) => (
@@ -92,23 +94,19 @@ export function Hero() {
 
       {/* ── NAV ── */}
       <nav className="relative z-20 flex items-center justify-between px-4 md:px-8 lg:px-12 py-3 md:py-6 anim-cut-in" style={d(100)}>
-        <div className="flex items-center gap-2">
-          <div className="relative w-7 h-7 md:w-8 md:h-8 flex items-center justify-center anim-snap-in" style={d(150)}>
-            <div className="absolute inset-0 bg-accent" />
-            <span className="relative font-sans text-sm md:text-lg text-accent-foreground leading-none">ID</span>
-          </div>
-          <div className="flex flex-col anim-slide-left" style={d(200)}>
-            <span className="font-mono text-[9px] md:text-[10px] tracking-[0.25em] md:tracking-[0.4em] text-foreground uppercase leading-none">
-              Iron District
-            </span>
-            <span className="font-mono text-[6px] md:text-[8px] tracking-[0.15em] text-foreground/40 uppercase">
-              CrossFit Affiliate
-            </span>
-          </div>
+        <div className="flex items-center anim-snap-in" style={d(150)}>
+          <Image
+            src="/images/wt.logo.png"
+            alt="WheelTec logo"
+            width={160}
+            height={48}
+            className="h-14 md:h-20 w-auto object-contain -my-3 md:-my-5"
+            priority
+          />
         </div>
 
         <div className="hidden lg:flex items-center gap-10">
-          {["Program", "Schedule", "Athletes", "Contact"].map((item, i) => (
+          {["Palvelut", "Hinnasto", "Galleria", "Yhteystiedot"].map((item, i) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -123,21 +121,21 @@ export function Hero() {
 
         <div className="flex items-center gap-2 md:gap-4">
           <span className="font-mono text-[9px] text-foreground/30 hidden md:block tracking-[0.15em] anim-cut-in" style={d(300)}>
-            EST. 2019
+            EST. 2012
           </span>
           <a
-            href="#contact"
-            className="relative font-mono text-[8px] md:text-[11px] bg-accent text-accent-foreground px-3 md:px-5 py-2 md:py-2.5 tracking-[0.15em] uppercase overflow-hidden group anim-snap-in min-h-[36px] md:min-h-[40px] flex items-center"
-            style={d(350)}
+            href="#yhteystiedot"
+            className="relative font-mono text-[8px] md:text-[11px] text-background px-3 md:px-5 py-2 md:py-2.5 tracking-[0.15em] uppercase overflow-hidden group anim-snap-in min-h-[36px] md:min-h-[40px] flex items-center"
+            style={{ ...d(350), background: "linear-gradient(90deg, #00F5C8, #009DFF)" }}
           >
-            <span className="relative z-10">Join Now</span>
+            <span className="relative z-10">Ota Yhteyttä</span>
             <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" />
           </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden flex flex-col gap-1.5 p-2 min-h-[36px] min-w-[36px] items-center justify-center anim-cut-in"
             style={d(350)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? "Sulje valikko" : "Avaa valikko"}
             aria-expanded={menuOpen}
           >
             <span className={`w-5 h-[1.5px] bg-foreground transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[3.5px]" : ""}`} />
@@ -156,12 +154,12 @@ export function Hero() {
         <button
           onClick={() => setMenuOpen(false)}
           className="absolute top-3 right-4 p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
-          aria-label="Close menu"
+          aria-label="Sulje valikko"
         >
           <span className="w-5 h-[1.5px] bg-foreground block rotate-45 absolute" />
           <span className="w-5 h-[1.5px] bg-foreground block -rotate-45 absolute" />
         </button>
-        {["Program", "Schedule", "Athletes", "Contact"].map((item) => (
+        {["Palvelut", "Hinnasto", "Galleria", "Yhteystiedot"].map((item) => (
           <a
             key={item}
             href={`#${item.toLowerCase()}`}
@@ -174,87 +172,63 @@ export function Hero() {
       </div>
 
       {/* ── CONTENT ── */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 md:px-8 lg:px-12 md:justify-end md:pb-8">
+      <div className="relative z-10 flex-1 flex flex-col justify-end px-4 md:px-8 lg:px-12 pb-20 md:pb-8">
         <div className="max-w-[1400px] mx-auto w-full text-center md:text-left">
           {/* Tagline */}
           <div className="flex items-center justify-center md:justify-start gap-2 md:gap-4 mb-2 md:mb-5 anim-wipe-right" style={d(300)}>
             <div className="h-[1.5px] w-5 md:w-16 bg-accent" />
             <span className="font-mono text-[7px] md:text-xs text-accent tracking-[0.15em] md:tracking-[0.4em] uppercase">
-              No Mercy Fitness
+              Kun ulkonäkö ratkaisee
             </span>
             <div className="h-[1.5px] w-5 bg-accent md:hidden" />
           </div>
 
-          {/* Headline -- compact leading, tight vertical stack */}
-          <div className="relative mb-2 md:mb-0">
-            {["Break", "Every", "Limit."].map((word, i) => (
-              <div key={word} className="overflow-hidden">
-                <h1
-                  className={`font-sans leading-[0.85] tracking-[-0.04em] uppercase anim-shutter-up ${
-                    word === "Every" ? "text-accent" : "text-foreground"
-                  } text-[15vw] sm:text-[14vw] md:text-[13vw] lg:text-[10vw]`}
-                  style={d(400 + i * 120)}
-                >
-                  {word}
-                </h1>
-              </div>
-            ))}
+          {/* Headline */}
+          <div className="relative mb-2 md:mb-0 overflow-hidden">
+            <h1
+              className="font-sans leading-[0.85] tracking-[-0.04em] uppercase anim-shutter-up text-[22vw] sm:text-[20vw] md:text-[18vw] lg:text-[16vw]"
+              style={{
+                ...d(400),
+                background: "linear-gradient(90deg, #00F5C8 0%, #00D9FF 50%, #0033FF 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Wheeltec
+            </h1>
           </div>
 
           {/* Copy */}
           <p className="font-mono text-[8px] sm:text-[10px] md:text-[13px] text-foreground/60 max-w-[240px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in" style={d(800)}>
-            No mirrors. No machines. No mercy. Just barbells, chalk, and the will to be better than yesterday.
+            Tärykiillotus, jauhemaalaus, hiekkapuhallus ja oikaisu – kaikki mitä vanteesi tarvitsee. Myös muut maalaustyöt.
           </p>
 
           {/* CTAs */}
           <div className="flex items-center justify-center md:justify-start gap-2 md:gap-4 mt-3 md:mt-6 anim-cut-in" style={d(900)}>
             <a
-              href="#program"
+              href="#palvelut"
               className="group relative font-mono text-[7px] sm:text-[9px] md:text-[11px] bg-foreground text-background px-3 sm:px-5 md:px-6 py-2 md:py-3 tracking-[0.12em] md:tracking-[0.2em] uppercase overflow-hidden min-h-[36px] md:min-h-[44px] flex items-center"
             >
-              <span className="relative z-10 group-hover:text-accent-foreground transition-colors duration-300">View Programs</span>
-              <span className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+              <span className="relative z-10 group-hover:text-background transition-colors duration-300">Katso Palvelut</span>
+              <span className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" style={{ background: "linear-gradient(90deg, #00F5C8, #009DFF)" }} />
             </a>
             <a
-              href="#schedule"
+              href="#hinnasto"
               className="font-mono text-[7px] sm:text-[9px] md:text-[11px] text-foreground/60 px-3 sm:px-5 md:px-6 py-2 md:py-3 tracking-[0.12em] md:tracking-[0.2em] uppercase border border-foreground/20 hover:border-foreground hover:text-foreground transition-all min-h-[36px] md:min-h-[44px] flex items-center"
             >
-              Schedule
+              Hinnasto
             </a>
           </div>
 
-          {/* Stats row -- tighter, proportional */}
-          <div className="mt-4 md:mt-10 flex items-end justify-center md:justify-start gap-4 sm:gap-8 md:gap-12 anim-counter-pop" style={d(950)}>
-            {[
-              { target: 4, suffix: "", label: "Locations" },
-              { target: 2000, suffix: "+", label: "Athletes" },
-              { target: 98, suffix: "%", label: "Retention" },
-            ].map((stat, i) => (
-              <div key={stat.label} className="relative">
-                <span className="font-sans text-[8vw] sm:text-[7vw] md:text-7xl lg:text-8xl text-foreground leading-none block">
-                  <Counter target={stat.target} suffix={stat.suffix} go />
-                </span>
-                <span className="font-mono text-[5px] sm:text-[7px] md:text-[10px] text-foreground/40 block tracking-[0.12em] md:tracking-[0.25em] uppercase mt-0.5 md:mt-2">
-                  {stat.label}
-                </span>
-                {i < 2 && (
-                  <div className="absolute -right-2 sm:-right-4 md:-right-6 top-1/4 h-1/2 w-[1px] bg-foreground/15" />
-                )}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
       {/* Bottom bar desktop only */}
       <div className="relative z-10 px-4 md:px-8 lg:px-12 pb-4 md:pb-6 hidden md:block">
         <div className="flex items-center justify-between max-w-[1400px] mx-auto w-full anim-cut-in" style={d(1000)}>
-          <div className="flex items-center gap-3">
-            <div className="w-[1px] h-10 bg-accent" />
-            <span className="font-mono text-[9px] text-foreground/40 tracking-[0.3em] uppercase">Scroll</span>
-          </div>
           <div className="flex items-center gap-6">
-            {["05:30 AM", "MON-SAT", "OPEN GYM SUN"].map((info, i) => (
+            {["MA–PE 08–17", "LA 09–14", "SULJETTU SU"].map((info, i) => (
               <span key={info} className="font-mono text-[9px] text-foreground/40 tracking-[0.2em] uppercase">
                 {i > 0 && <span className="text-accent mr-6">/</span>}
                 {info}
@@ -264,7 +238,10 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-accent/40 anim-width-expand" style={d(600)} />
+      <div
+        className="absolute bottom-0 left-0 h-[1px] w-full anim-width-expand"
+        style={{ ...d(600), background: "linear-gradient(90deg, #00F5C8, #00D9FF, #009DFF)" }}
+      />
     </section>
   )
 }

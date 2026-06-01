@@ -1,7 +1,7 @@
 import { Hero } from "@/components/hero"
 import { HeroImages } from "@/components/hero-images"
 import { MarqueeStrip } from "@/components/marquee-strip"
-import { ProgramGrid } from "@/components/program-grid"
+import { MetalParts } from "@/components/metal-parts"
 import { SplitFeature } from "@/components/split-feature"
 import { ScheduleBlock } from "@/components/schedule-block"
 import { CtaBlock } from "@/components/cta-block"
@@ -16,7 +16,7 @@ export default function Page() {
       <Hero />
       <HeroImages />
       <MarqueeStrip />
-      <ProgramGrid />
+      <MetalParts />
       <SplitFeature />
       <ScheduleBlock />
       <CtaBlock />

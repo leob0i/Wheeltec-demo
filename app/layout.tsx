@@ -16,25 +16,25 @@ const _jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'IRON DISTRICT // CrossFit',
-  description: 'Raw. Relentless. Results. No shortcuts. No excuses. Just iron.',
+  title: 'WHEELTEC // Vanne & Kiillotus',
+  description: 'Laatu. Tarkkuus. Tulos. Tärykiillotus, jauhemaalaus, hiekkapuhallus, kemiallinen maalinpoisto ja vanteiden oikaisu.',
   openGraph: {
-    title: 'IRON DISTRICT // CrossFit',
-    description: 'Raw brutalist CrossFit landing page. Heavy typography, aggressive animations, industrial textures. Built with Next.js and Tailwind.',
+    title: 'WHEELTEC // Vanne & Kiillotus',
+    description: 'Ammattimainen vannekäsittely – tärykiillotus, jauhemaalaus, hiekkapuhallus, kemiallinen maalinpoisto ja vanteiden oikaisu.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'IRON DISTRICT - Break Every Limit',
+        alt: 'WheelTec – Premium Vanne Palvelut',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IRON DISTRICT // CrossFit',
-    description: 'Raw brutalist CrossFit landing page. Built with just prompts in v0.',
+    title: 'WHEELTEC // Vanne & Kiillotus',
+    description: 'Ammattimainen vannekäsittely. Laatu ennen kaikkea.',
     images: ['/images/og-image.jpg'],
   },
 }

@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react"
 
 const stats = [
-  { value: "5:00", label: "AM First Class", suffix: "" },
-  { value: "12", label: "Classes / Day", suffix: "" },
-  { value: "98", label: "Member Retention", suffix: "%" },
-  { value: "0", label: "Machines", suffix: "" },
+  { value: "15+", label: "Vuoden Kokemus", suffix: "" },
+  { value: "5000", label: "Vannetta Käsitelty", suffix: "+" },
+  { value: "98", label: "Tyytyväisyys", suffix: "%" },
+  { value: "5", label: "Erikoispalvelua", suffix: "" },
 ]
 
 export function SplitFeature() {
@@ -32,16 +32,12 @@ export function SplitFeature() {
           <div className="absolute top-0 right-0 w-16 md:w-20 h-full diagonal-stripes opacity-20 hidden md:block" aria-hidden="true" />
 
           <div className={visible ? "brutal-reveal" : "opacity-0"}>
-            <span className="font-mono text-[8px] md:text-[10px] text-accent tracking-[0.2em] md:tracking-[0.3em] uppercase block mb-2 md:mb-8">
-              [Manifesto]
-            </span>
-            {/* Single line on mobile */}
             <h2 className="font-sans text-[9vw] sm:text-4xl md:text-7xl lg:text-8xl tracking-tighter text-foreground leading-[0.85] uppercase whitespace-nowrap mb-2 md:mb-8">
-              We Don{"'"}t Do <span className="text-accent">Easy</span>.
+              Laatu Yli <span className="text-accent">Kaiken</span>.
             </h2>
             <div className="w-8 md:w-16 h-[2px] bg-accent mb-2 md:mb-8" />
             <p className="font-mono text-[9px] md:text-sm text-muted-foreground leading-relaxed max-w-md">
-              This is not a gym. It{"'"}s a proving ground. Every rep is a question: how much do you want it? Every workout is an answer. We strip away the noise, the vanity, the comfort. What remains is raw human potential.
+              Jokainen vanne on meille projekti, ei vain työ. Pintakäsittelystä oikaisuun – teemme sen oikein tai emme lainkaan. Käytämme vain ammattitason materiaaleja ja menetelmiä.
             </p>
           </div>
         </div>
@@ -71,7 +67,11 @@ export function SplitFeature() {
               </div>
             ))}
           </div>
-          <div className="absolute bottom-0 right-0 w-6 h-6 md:w-16 md:h-16 bg-accent" aria-hidden="true" />
+          <div
+            className="absolute bottom-0 right-0 w-6 h-6 md:w-16 md:h-16"
+            style={{ background: "linear-gradient(135deg, #00D9FF, #009DFF)" }}
+            aria-hidden="true"
+          />
         </div>
       </div>
     </section>

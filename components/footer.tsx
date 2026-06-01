@@ -15,7 +15,7 @@ export function Footer() {
     return () => observer.disconnect()
   }, [])
 
-  const marqueeText = "IRON DISTRICT / CROSSFIT / "
+  const marqueeText = "WHEELTEC / VANTEET / "
 
   return (
     <footer className="relative bg-card border-t border-border">
@@ -46,25 +46,25 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-3 md:mb-6">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-accent" />
               <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] md:tracking-[0.3em] text-foreground uppercase">
-                Iron District
+                WheelTec
               </span>
             </div>
             <p className="font-mono text-[10px] text-muted-foreground leading-relaxed">
-              Raw. Relentless. Results.
+              Laatu. Tarkkuus. Tulos.
               <br />
-              No shortcuts. No excuses.
+              Joka vanne käsitellään
               <br />
-              Just iron.
+              parhaalla tavalla.
             </p>
           </div>
 
           {/* Links */}
           <div>
             <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
-              Navigate
+              Navigoi
             </span>
             <nav className="flex flex-col gap-2 md:gap-3">
-              {["Programs", "Schedule", "Athletes", "Pricing", "FAQ"].map((link) => (
+              {["Palvelut", "Hinnasto", "Galleria", "Yhteystiedot", "Tarjous"].map((link) => (
                 <a key={link} href="#" className="font-mono text-[10px] md:text-xs text-muted-foreground hover:text-accent transition-colors tracking-[0.08em] md:tracking-[0.1em] py-0.5 min-h-[32px] flex items-center">
                   {link}
                 </a>
@@ -75,14 +75,14 @@ export function Footer() {
           {/* Contact */}
           <div>
             <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
-              Contact
+              Yhteystiedot
             </span>
             <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
-              <span>412 Industrial Blvd</span>
-              <span>Unit 7, Dock C</span>
-              <span>Portland, OR 97201</span>
-              <a href="mailto:info@irondistrict.com" className="hover:text-accent transition-colors mt-1 break-all">
-                info@irondistrict.com
+              <span>Teollisuustie 12</span>
+              <span>00380 Helsinki</span>
+              <span>Finland</span>
+              <a href="mailto:info@wheeltec.fi" className="hover:text-accent transition-colors mt-1 break-all">
+                info@wheeltec.fi
               </a>
             </div>
           </div>
@@ -90,20 +90,20 @@ export function Footer() {
           {/* Hours */}
           <div>
             <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
-              Hours
+              Aukioloajat
             </span>
             <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
               <div className="flex justify-between gap-4 max-w-[180px]">
-                <span>MON-FRI</span>
-                <span>05:30 - 20:30</span>
+                <span>MA–PE</span>
+                <span>08:00 – 17:00</span>
               </div>
               <div className="flex justify-between gap-4 max-w-[180px]">
-                <span>SAT</span>
-                <span>08:00 - 13:00</span>
+                <span>LA</span>
+                <span>09:00 – 14:00</span>
               </div>
               <div className="flex justify-between gap-4 max-w-[180px]">
-                <span>SUN</span>
-                <span className="text-accent">CLOSED</span>
+                <span>SU</span>
+                <span className="text-accent">SULJETTU</span>
               </div>
             </div>
           </div>
@@ -112,10 +112,10 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-5 md:mt-16 pt-4 md:pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-4">
           <span className="font-mono text-[8px] md:text-[10px] text-muted-foreground">
-            &copy; 2026 IRON DISTRICT. ALL RIGHTS RESERVED.
+            &copy; 2026 WHEELTEC. KAIKKI OIKEUDET PIDÄTETÄÄN.
           </span>
           <div className="flex items-center gap-4 md:gap-6">
-            {["Instagram", "YouTube", "Twitter"].map((social) => (
+            {["Instagram", "Facebook", "YouTube"].map((social) => (
               <a key={social} href="#" className="font-mono text-[8px] md:text-[10px] text-muted-foreground hover:text-accent transition-colors tracking-[0.1em] md:tracking-[0.15em] uppercase py-1 min-h-[32px] flex items-center">
                 {social}
               </a>
@@ -124,7 +124,11 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-5 h-5 md:w-8 md:h-8 bg-accent" aria-hidden="true" />
+      <div
+        className="absolute bottom-0 left-0 w-5 h-5 md:w-8 md:h-8"
+        style={{ background: "linear-gradient(135deg, #00F5C8, #009DFF)" }}
+        aria-hidden="true"
+      />
     </footer>
   )
 }

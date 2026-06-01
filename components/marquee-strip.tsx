@@ -1,27 +1,32 @@
 export function MarqueeStrip() {
   const words = [
-    "SNATCH",
-    "CLEAN & JERK",
-    "DEADLIFT",
-    "THRUSTER",
-    "MUSCLE-UP",
-    "BOX JUMP",
-    "WALL BALL",
-    "BURPEE",
-    "DOUBLE-UNDER",
-    "HANDSTAND WALK",
+    "TÄRYKIILLOTUS",
+    "JAUHEMAALAUS",
+    "HIEKKAPUHALLUS",
+    "KEMIALLINEN PESU",
+    "VANTEIDEN OIKAISU",
+    "CERAMIC POLISH",
+    "POWDER COAT",
+    "RIM REPAIR",
+    "SANDBLASTING",
+    "CHROME FINISH",
   ]
 
   return (
-    <div className="bg-accent overflow-hidden py-2.5 md:py-3 relative" role="marquee" aria-label="CrossFit movements">
+    <div
+      className="overflow-hidden py-2.5 md:py-3 relative"
+      style={{ background: "linear-gradient(90deg, #00F5C8, #00E5D4, #00D9FF, #009DFF)" }}
+      role="marquee"
+      aria-label="WheelTec palvelut"
+    >
       <div className="flex animate-marquee whitespace-nowrap">
         {[...words, ...words].map((word, i) => (
           <span
             key={`${word}-${i}`}
-            className="font-sans text-lg md:text-3xl text-accent-foreground mx-3 md:mx-10 tracking-wider"
+            className="font-sans text-lg md:text-3xl text-background mx-3 md:mx-10 tracking-wider"
           >
             {word}
-            <span className="text-accent-foreground/40 mx-3 md:mx-10">/</span>
+            <span className="text-background/40 mx-3 md:mx-10">/</span>
           </span>
         ))}
       </div>
