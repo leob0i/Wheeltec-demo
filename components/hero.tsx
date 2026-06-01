@@ -125,7 +125,7 @@ export function Hero() {
           </span>
           <a
             href="#yhteystiedot"
-            className="relative font-mono text-[8px] md:text-[11px] text-background px-3 md:px-5 py-2 md:py-2.5 tracking-[0.15em] uppercase overflow-hidden group anim-snap-in min-h-[36px] md:min-h-[40px] flex items-center"
+            className="relative font-mono text-[11px] md:text-[11px] text-background px-3 md:px-5 py-2 md:py-2.5 tracking-[0.15em] uppercase overflow-hidden group anim-snap-in min-h-[36px] md:min-h-[40px] flex items-center"
             style={{ ...d(350), background: "linear-gradient(90deg, #00F5C8, #009DFF)" }}
           >
             <span className="relative z-10">Ota Yhteyttä</span>
@@ -177,7 +177,7 @@ export function Hero() {
           {/* Tagline */}
           <div className="flex items-center justify-center md:justify-start gap-2 md:gap-4 mb-2 md:mb-5 anim-wipe-right" style={d(300)}>
             <div className="h-[1.5px] w-5 md:w-16 bg-accent" />
-            <span className="font-mono text-[7px] md:text-xs text-accent tracking-[0.15em] md:tracking-[0.4em] uppercase">
+            <span className="font-mono text-[11px] md:text-xs text-accent tracking-[0.15em] md:tracking-[0.4em] uppercase">
               Kun ulkonäkö ratkaisee
             </span>
             <div className="h-[1.5px] w-5 bg-accent md:hidden" />
@@ -200,7 +200,7 @@ export function Hero() {
           </div>
 
           {/* Copy */}
-          <p className="font-mono text-[8px] sm:text-[10px] md:text-[13px] text-foreground/60 max-w-[240px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in" style={d(800)}>
+          <p className="font-mono text-xs sm:text-[10px] md:text-[13px] text-foreground/60 max-w-[240px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in" style={d(800)}>
             Tärykiillotus, jauhemaalaus, hiekkapuhallus ja oikaisu – kaikki mitä vanteesi tarvitsee. Myös muut maalaustyöt.
           </p>
 
@@ -208,14 +208,14 @@ export function Hero() {
           <div className="flex items-center justify-center md:justify-start gap-2 md:gap-4 mt-3 md:mt-6 anim-cut-in" style={d(900)}>
             <a
               href="#palvelut"
-              className="group relative font-mono text-[7px] sm:text-[9px] md:text-[11px] bg-foreground text-background px-3 sm:px-5 md:px-6 py-2 md:py-3 tracking-[0.12em] md:tracking-[0.2em] uppercase overflow-hidden min-h-[36px] md:min-h-[44px] flex items-center"
+              className="group relative font-mono text-[11px] sm:text-[9px] md:text-[11px] bg-foreground text-background px-3 sm:px-5 md:px-6 py-2 md:py-3 tracking-[0.12em] md:tracking-[0.2em] uppercase overflow-hidden min-h-[36px] md:min-h-[44px] flex items-center"
             >
               <span className="relative z-10 group-hover:text-background transition-colors duration-300">Katso Palvelut</span>
               <span className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" style={{ background: "linear-gradient(90deg, #00F5C8, #009DFF)" }} />
             </a>
             <a
               href="#hinnasto"
-              className="font-mono text-[7px] sm:text-[9px] md:text-[11px] text-foreground/60 px-3 sm:px-5 md:px-6 py-2 md:py-3 tracking-[0.12em] md:tracking-[0.2em] uppercase border border-foreground/20 hover:border-foreground hover:text-foreground transition-all min-h-[36px] md:min-h-[44px] flex items-center"
+              className="font-mono text-[11px] sm:text-[9px] md:text-[11px] text-foreground/60 px-3 sm:px-5 md:px-6 py-2 md:py-3 tracking-[0.12em] md:tracking-[0.2em] uppercase border border-foreground/20 hover:border-foreground hover:text-foreground transition-all min-h-[36px] md:min-h-[44px] flex items-center"
             >
               Hinnasto
             </a>

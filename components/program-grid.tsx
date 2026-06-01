@@ -75,7 +75,7 @@ export function ProgramGrid() {
           <div className="flex flex-col justify-between">
             <div>
               <span
-                className={`font-mono text-[8px] md:text-[10px] text-accent tracking-[0.2em] md:tracking-[0.3em] uppercase block mb-1 md:mb-3 ${visible ? "anim-cut-in" : "opacity-0"}`}
+                className={`font-mono text-[11px] md:text-[10px] text-accent tracking-[0.2em] md:tracking-[0.3em] uppercase block mb-1 md:mb-3 ${visible ? "anim-cut-in" : "opacity-0"}`}
                 style={{ animationDelay: "0.1s" }}
               >
                 [Palvelut]
@@ -88,7 +88,7 @@ export function ProgramGrid() {
             </div>
 
             <div className={`mt-2 lg:mt-0 lg:pb-2 ${visible ? "anim-cut-in" : "opacity-0"}`} style={{ animationDelay: "0.6s" }}>
-              <p className="font-mono text-[9px] md:text-xs text-foreground/50 max-w-[260px] md:max-w-xs leading-relaxed mb-2 md:mb-5">
+              <p className="font-mono text-xs md:text-xs text-foreground/50 max-w-[260px] md:max-w-xs leading-relaxed mb-2 md:mb-5">
                 Viisi erikoispalvelua. Yksi standardi: laatu. Jokainen vanne käsitellään huolella.
               </p>
               <div className="flex items-center gap-3 md:gap-6">
@@ -99,7 +99,7 @@ export function ProgramGrid() {
                 ].map((s) => (
                   <div key={s.l} className="flex items-baseline gap-1">
                     <span className="font-sans text-base md:text-2xl text-accent leading-none">{s.v}</span>
-                    <span className="font-mono text-[6px] md:text-[9px] text-foreground/35 tracking-[0.1em] uppercase">{s.l}</span>
+                    <span className="font-mono text-[9px] md:text-[9px] text-foreground/35 tracking-[0.1em] uppercase">{s.l}</span>
                   </div>
                 ))}
               </div>
@@ -118,7 +118,7 @@ export function ProgramGrid() {
               <div className="absolute top-0 left-0 w-3 h-3 md:w-6 md:h-6 border-t-2 border-l-2 border-accent" />
               <div className="absolute bottom-0 right-0 w-3 h-3 md:w-6 md:h-6 border-b-2 border-r-2 border-accent" />
               <div className="absolute bottom-2 left-2 bg-background/90 px-1.5 py-0.5 md:px-2 md:py-1">
-                <span className="font-mono text-[6px] md:text-[9px] text-foreground/60 tracking-[0.12em] md:tracking-[0.2em] uppercase">
+                <span className="font-mono text-[9px] md:text-[9px] text-foreground/60 tracking-[0.12em] md:tracking-[0.2em] uppercase">
                   Oma Tila
                 </span>
               </div>
@@ -142,15 +142,15 @@ export function ProgramGrid() {
                 style={{ background: "linear-gradient(180deg, #00F5C8, #009DFF)" }}
               />
 
-              <div className="flex items-center justify-between py-3 md:py-6 pl-0 md:pl-4">
+              <div className="flex items-center justify-between py-2 md:py-6 pl-0 md:pl-4">
                 {/* Left: ID + Title */}
                 <div className="flex items-baseline gap-2 md:gap-8 min-w-0">
-                  <span className="font-mono text-[8px] md:text-xs text-foreground/30 tabular-nums">{program.id}</span>
+                  <span className="font-mono text-[11px] md:text-xs text-foreground/30 tabular-nums">{program.id}</span>
                   <div>
-                    <h3 className={`font-sans text-xl md:text-6xl lg:text-7xl tracking-tighter leading-none uppercase transition-colors duration-300 ${hoveredId === program.id ? "text-accent" : "text-foreground"}`}>
+                    <h3 className={`font-sans text-2xl md:text-6xl lg:text-7xl tracking-tighter leading-none uppercase transition-colors duration-300 ${hoveredId === program.id ? "text-accent" : "text-foreground"}`}>
                       {program.title}
                     </h3>
-                    <span className="font-mono text-[7px] md:text-[10px] text-foreground/50 tracking-[0.08em] md:tracking-[0.2em] uppercase block">
+                    <span className="font-mono text-[10px] md:text-[10px] text-foreground/50 tracking-[0.08em] md:tracking-[0.2em] uppercase block">
                       {program.subtitle}
                     </span>
                   </div>
@@ -164,13 +164,13 @@ export function ProgramGrid() {
                 {/* Meta */}
                 <div className="flex items-center gap-2 md:gap-6 shrink-0">
                   <div className="hidden sm:block">
-                    <span className="font-mono text-[6px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Aika</span>
-                    <span className="font-mono text-[8px] md:text-xs text-foreground/75">{program.time}</span>
+                    <span className="font-mono text-[9px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Aika</span>
+                    <span className="font-mono text-[11px] md:text-xs text-foreground/75">{program.time}</span>
                   </div>
                   <div className="w-[1px] h-4 md:h-8 bg-border hidden sm:block" />
                   <div>
-                    <span className="font-mono text-[6px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Sopii</span>
-                    <span className={`font-mono text-[8px] md:text-xs ${program.level === "METALLIVANTEET" ? "text-accent" : "text-foreground/75"}`}>
+                    <span className="font-mono text-[9px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Sopii</span>
+                    <span className={`font-mono text-[11px] md:text-xs ${program.level === "METALLIVANTEET" ? "text-accent" : "text-foreground/75"}`}>
                       {program.level}
                     </span>
                   </div>
