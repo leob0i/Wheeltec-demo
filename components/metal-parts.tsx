@@ -28,8 +28,11 @@ export function MetalParts() {
               Ei pelkästään<br />
               <span className="text-accent">vanteille</span>.
             </h2>
-            <p className="font-mono text-[9px] md:text-sm text-foreground/60 max-w-md leading-relaxed mb-3 md:mb-5">
+            <p className="font-mono text-[9px] md:text-sm text-foreground/60 max-w-md leading-relaxed mb-2 md:mb-3">
               Tärykiillotus, jauhemaalaus ja muut pintakäsittelyt soveltuvat myös monille auton, moottoripyörän ja teollisuuden metalliosille.
+            </p>
+            <p className="font-mono text-[9px] md:text-sm text-foreground/60 max-w-md leading-relaxed mb-3 md:mb-5">
+              Käytössämme on markkinoiden parhaat materiaalit ja meillä myös ulkonäkö ratkaisee.
             </p>
             <a
               href="#galleria"

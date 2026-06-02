@@ -4,41 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 export function Footer() {
-  const marqueeRef = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.1 }
-    )
-    if (marqueeRef.current) observer.observe(marqueeRef.current)
-    return () => observer.disconnect()
-  }, [])
-
-  const marqueeText = "WHEELTEC / VANTEET / "
 
   return (
     <footer className="relative bg-card border-t border-border">
-      {/* Marquee */}
-      <div ref={marqueeRef} className="overflow-hidden border-b border-border py-3 md:py-8">
-        <div className={`flex whitespace-nowrap transition-opacity duration-700 ${visible ? "opacity-100" : "opacity-0"}`}>
-          <div className="flex animate-marquee-footer shrink-0">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <span key={`a-${i}`} className="font-sans text-[10vw] md:text-[7vw] tracking-tighter uppercase footer-stroke-text">
-                {marqueeText}
-              </span>
-            ))}
-          </div>
-          <div className="flex animate-marquee-footer shrink-0" aria-hidden="true">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <span key={`b-${i}`} className="font-sans text-[10vw] md:text-[7vw] tracking-tighter uppercase footer-stroke-text">
-                {marqueeText}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-5 md:py-16">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
@@ -74,38 +42,41 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Contact */}
-          <div>
-            <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
-              Yhteystiedot
-            </span>
-            <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
-              <span>Teollisuustie 12</span>
-              <span>00380 Helsinki</span>
-              <span>Finland</span>
-              <a href="mailto:info@wheeltec.fi" className="hover:text-accent transition-colors mt-1 break-all">
-                info@wheeltec.fi
-              </a>
+          {/* Contact + Hours: mobiililla samassa gridisolussa, desktopilla erillisinä */}
+          <div className="flex flex-col gap-4 md:contents">
+            {/* Contact */}
+            <div>
+              <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
+                Yhteystiedot
+              </span>
+              <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
+                <span>Teollisuustie 12</span>
+                <span>00380 Helsinki</span>
+                <span>Finland</span>
+                <a href="mailto:info@wheeltec.fi" className="hover:text-accent transition-colors mt-1 break-all">
+                  info@wheeltec.fi
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* Hours */}
-          <div>
-            <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
-              Aukioloajat
-            </span>
-            <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
-              <div className="flex justify-between gap-4 max-w-[180px]">
-                <span>MA–PE</span>
-                <span>08:00 – 17:00</span>
-              </div>
-              <div className="flex justify-between gap-4 max-w-[180px]">
-                <span>LA</span>
-                <span>09:00 – 14:00</span>
-              </div>
-              <div className="flex justify-between gap-4 max-w-[180px]">
-                <span>SU</span>
-                <span className="text-accent">SULJETTU</span>
+            {/* Hours */}
+            <div>
+              <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] md:tracking-[0.3em] uppercase block mb-2.5 md:mb-4">
+                Aukioloajat
+              </span>
+              <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
+                <div className="flex justify-between gap-4 max-w-[180px]">
+                  <span>MA–PE</span>
+                  <span>08:00 – 17:00</span>
+                </div>
+                <div className="flex justify-between gap-4 max-w-[180px]">
+                  <span>LA</span>
+                  <span>09:00 – 14:00</span>
+                </div>
+                <div className="flex justify-between gap-4 max-w-[180px]">
+                  <span>SU</span>
+                  <span className="text-accent">SULJETTU</span>
+                </div>
               </div>
             </div>
           </div>
