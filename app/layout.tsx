@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Ammattimainen vannekäsittely – tärykiillotus, jauhemaalaus, hiekkapuhallus, kemiallinen maalinpoisto ja vanteiden oikaisu.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'WheelTec – Premium Vanne Palvelut',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'WHEELTEC // Vanne & Kiillotus',
     description: 'Ammattimainen vannekäsittely. Laatu ennen kaikkea.',
-    images: ['/images/og-image.jpg'],
+    images: ['/images/og-image.png'],
   },
 }
 
