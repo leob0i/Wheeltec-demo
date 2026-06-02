@@ -147,7 +147,7 @@ export function ProgramGrid() {
                 <div className="flex items-baseline gap-2 md:gap-8 min-w-0">
                   <span className="font-mono text-[11px] md:text-xs text-foreground/30 tabular-nums">{program.id}</span>
                   <div>
-                    <h3 className={`font-sans text-2xl md:text-6xl lg:text-7xl tracking-tighter leading-none uppercase transition-colors duration-300 ${hoveredId === program.id ? "text-accent" : "text-foreground"}`}>
+                    <h3 className={`font-sans text-3xl md:text-6xl lg:text-7xl tracking-tighter leading-none uppercase transition-colors duration-300 ${hoveredId === program.id ? "text-accent" : "text-foreground"}`}>
                       {program.title}
                     </h3>
                     <span className="font-mono text-[10px] md:text-[10px] text-foreground/50 tracking-[0.08em] md:tracking-[0.2em] uppercase block">
