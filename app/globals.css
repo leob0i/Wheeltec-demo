@@ -229,3 +229,26 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Metallic shimmer sweep for kiilloitus hero headline */
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    hsl(0 0% 92%) 0%,
+    hsl(0 0% 97%) 30%,
+    hsl(189 100% 75%) 47%,
+    hsl(0 0% 100%) 52%,
+    hsl(0 0% 97%) 57%,
+    hsl(0 0% 92%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 const images = [
@@ -9,6 +9,7 @@ const images = [
     alt: "Kiiltävä tärykiillotettu vanne lähikuvassa",
     label: "KIILLOTUS",
     aspect: "aspect-[3/4]",
+    href: "/kiilloitus",
   },
   {
     src: "/images/maalaus.jpeg",
@@ -84,12 +85,11 @@ export function HeroImages() {
         <div className="hidden md:grid grid-cols-4 gap-3">
           {images.map((img, i) => {
             const offsets = [0, 48, 16, 64]
+            const Wrapper = img.href
+              ? ({ children }: { children: React.ReactNode }) => <a href={img.href} className="relative group block" style={{ marginTop: `${offsets[i]}px` }}>{children}</a>
+              : ({ children }: { children: React.ReactNode }) => <div className="relative group" style={{ marginTop: `${offsets[i]}px` }}>{children}</div>
             return (
-              <div
-                key={img.label}
-                className="relative group"
-                style={{ marginTop: `${offsets[i]}px` }}
-              >
+              <Wrapper key={img.label}>
                 <div
                   className="transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                   style={{
@@ -125,18 +125,19 @@ export function HeroImages() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Wrapper>
             )
           })}
         </div>
 
         {/* Mobile: 2-column tight, equal height, no stagger offset */}
         <div className="grid grid-cols-2 gap-1.5 md:hidden">
-          {images.map((img, i) => (
-            <div
-              key={img.label}
-              className="relative"
-            >
+          {images.map((img, i) => {
+            const MobileWrapper = img.href
+              ? ({ children }: { children: React.ReactNode }) => <a href={img.href} className="relative block">{children}</a>
+              : ({ children }: { children: React.ReactNode }) => <div className="relative">{children}</div>
+            return (
+            <MobileWrapper key={img.label}>
               <div
                 className="transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                 style={{
@@ -159,8 +160,9 @@ export function HeroImages() {
                   {img.label}{img.labelLine2 && <><br />{img.labelLine2}</>}
                 </span>
               </div>
-            </div>
-          ))}
+            </MobileWrapper>
+            )
+          })}
         </div>
       </div>
 
