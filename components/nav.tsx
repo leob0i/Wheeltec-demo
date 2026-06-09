@@ -74,7 +74,7 @@ export function Nav() {
               <div className="bg-background/95 backdrop-blur-sm border border-foreground/10 py-2 min-w-[160px]">
                 {[
                   { label: "Kiilloitus", href: "/kiilloitus" },
-                  { label: "Maalaus", href: "#palvelut" },
+                  { label: "Maalaus", href: "/maalaus" },
                   { label: "Oikaisu", href: "#palvelut" },
                   { label: "Maalinpoisto", href: "#palvelut" },
                 ].map((sub) => (
@@ -161,7 +161,7 @@ export function Nav() {
         </button>
         {[
           { label: "Kiilloitus",   href: "/kiilloitus" },
-          { label: "Maalaus",      href: "#palvelut" },
+          { label: "Maalaus",      href: "/maalaus" },
           { label: "Oikaisu",      href: "#palvelut" },
           { label: "Maalinpoisto", href: "#palvelut" },
           { label: "Hinnasto",     href: "#hinnasto" },
