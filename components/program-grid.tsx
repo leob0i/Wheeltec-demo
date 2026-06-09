@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
-const programs = [
+const programs: { id: string; title: string; subtitle: string; description: string; time: string; level: string; href?: string }[] = [
   {
     id: "01",
     title: "TÄRYKIILLOTUS",
@@ -19,6 +20,7 @@ const programs = [
     description: "Kestävä ja tasainen jauhemaalaus kaikissa väreissä. Suojaa korroosioilta vuosiksi.",
     time: "1–2 pv",
     level: "METALLIVANTEET",
+    href: "/maalaus",
   },
   {
     id: "03",
@@ -142,44 +144,55 @@ export function ProgramGrid() {
                 style={{ background: "linear-gradient(180deg, #00F5C8, #009DFF)" }}
               />
 
-              <div className="flex items-center justify-between py-2 md:py-6 pl-0 md:pl-4">
-                {/* Left: ID + Title */}
-                <div className="flex items-baseline gap-2 md:gap-8 min-w-0">
-                  <span className="font-mono text-[11px] md:text-xs text-foreground/30 tabular-nums">{program.id}</span>
-                  <div>
-                    <h3 className={`font-sans text-3xl md:text-6xl lg:text-7xl tracking-tighter leading-none uppercase transition-colors duration-300 ${hoveredId === program.id ? "text-accent" : "text-foreground"}`}>
-                      {program.title}
-                    </h3>
-                    <span className="font-mono text-[10px] md:text-[10px] text-foreground/50 tracking-[0.08em] md:tracking-[0.2em] uppercase block">
-                      {program.subtitle}
-                    </span>
-                  </div>
+              {program.href ? (
+                <Link href={program.href} className="flex items-center justify-between py-2 md:py-6 pl-0 md:pl-4">
+                  <RowInner program={program} hoveredId={hoveredId} />
+                </Link>
+              ) : (
+                <div className="flex items-center justify-between py-2 md:py-6 pl-0 md:pl-4">
+                  <RowInner program={program} hoveredId={hoveredId} />
                 </div>
-
-                {/* Description - desktop only */}
-                <p className={`font-mono text-xs max-w-xs leading-relaxed text-foreground/60 transition-all duration-300 hidden lg:block ${hoveredId === program.id ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"}`}>
-                  {program.description}
-                </p>
-
-                {/* Meta */}
-                <div className="flex items-center gap-2 md:gap-6 shrink-0">
-                  <div className="hidden sm:block">
-                    <span className="font-mono text-[9px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Aika</span>
-                    <span className="font-mono text-[11px] md:text-xs text-foreground/75">{program.time}</span>
-                  </div>
-                  <div className="w-[1px] h-4 md:h-8 bg-border hidden sm:block" />
-                  <div>
-                    <span className="font-mono text-[9px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Sopii</span>
-                    <span className={`font-mono text-[11px] md:text-xs ${program.level === "METALLIVANTEET" ? "text-accent" : "text-foreground/75"}`}>
-                      {program.level}
-                    </span>
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
       </div>
     </section>
+  )
+}
+
+function RowInner({ program, hoveredId }: { program: { id: string; title: string; subtitle: string; description: string; time: string; level: string }; hoveredId: string | null }) {
+  return (
+    <>
+      <div className="flex items-baseline gap-2 md:gap-8 min-w-0">
+        <span className="font-mono text-[11px] md:text-xs text-foreground/30 tabular-nums">{program.id}</span>
+        <div>
+          <h3 className={`font-sans text-3xl md:text-6xl lg:text-7xl tracking-tighter leading-none uppercase transition-colors duration-300 ${hoveredId === program.id ? "text-accent" : "text-foreground"}`}>
+            {program.title}
+          </h3>
+          <span className="font-mono text-[10px] md:text-[10px] text-foreground/50 tracking-[0.08em] md:tracking-[0.2em] uppercase block">
+            {program.subtitle}
+          </span>
+        </div>
+      </div>
+
+      <p className={`font-mono text-xs max-w-xs leading-relaxed text-foreground/60 transition-all duration-300 hidden lg:block ${hoveredId === program.id ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"}`}>
+        {program.description}
+      </p>
+
+      <div className="flex items-center gap-2 md:gap-6 shrink-0">
+        <div className="hidden sm:block">
+          <span className="font-mono text-[9px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Aika</span>
+          <span className="font-mono text-[11px] md:text-xs text-foreground/75">{program.time}</span>
+        </div>
+        <div className="w-[1px] h-4 md:h-8 bg-border hidden sm:block" />
+        <div>
+          <span className="font-mono text-[9px] md:text-[10px] text-foreground/35 block tracking-[0.08em] md:tracking-[0.2em] uppercase mb-0.5">Sopii</span>
+          <span className={`font-mono text-[11px] md:text-xs ${program.level === "METALLIVANTEET" ? "text-accent" : "text-foreground/75"}`}>
+            {program.level}
+          </span>
+        </div>
+      </div>
+    </>
   )
 }
