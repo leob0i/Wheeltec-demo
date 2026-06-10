@@ -16,6 +16,7 @@ const images = [
     alt: "Jauhemaalattu vanne ennen ja jälkeen käsittelyn",
     label: "MAALAUS",
     aspect: "aspect-[4/5]",
+    href: "/maalaus",
   },
   {
     src: "/images/vanneoikaisu.png",
