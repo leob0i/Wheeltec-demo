@@ -29,6 +29,7 @@ const programs: { id: string; title: string; subtitle: string; description: stri
     description: "Turvallinen kemiallinen menetelmä vanhan maalin täydelliseen poistoon ilman vauriota.",
     time: "4–8 h",
     level: "METALLIVANTEET",
+    href: "/maalinpoisto",
   },
   {
     id: "04",
@@ -45,6 +46,7 @@ const programs: { id: string; title: string; subtitle: string; description: stri
     description: "Täsmällinen oikaisu palauttaa vaurioituneen vanteen alkuperäiseen muotoonsa.",
     time: "1–2 h",
     level: "METALLIVANTEET",
+    href: "/vanteenoikaisu",
   },
 ]
 
@@ -161,7 +163,7 @@ export function ProgramGrid() {
   )
 }
 
-function RowInner({ program, hoveredId }: { program: { id: string; title: string; subtitle: string; description: string; time: string; level: string }; hoveredId: string | null }) {
+function RowInner({ program, hoveredId }: { program: { id: string; title: string; subtitle: string; description: string; time: string; level: string; href?: string }; hoveredId: string | null }) {
   return (
     <>
       <div className="flex items-baseline gap-2 md:gap-8 min-w-0">

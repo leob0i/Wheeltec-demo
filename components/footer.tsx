@@ -50,8 +50,8 @@ export function Footer() {
                 Yhteystiedot
               </span>
               <div className="flex flex-col gap-1.5 md:gap-3 font-mono text-[10px] md:text-xs text-muted-foreground">
-                <span>Teollisuustie 12</span>
-                <span>00380 Helsinki</span>
+                <span>Paalukatu 4</span>
+                <span>53500 Lappeenranta</span>
                 <span>Finland</span>
                 <a href="mailto:info@wheeltec.fi" className="hover:text-accent transition-colors mt-1 break-all">
                   info@wheeltec.fi

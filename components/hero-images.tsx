@@ -23,6 +23,7 @@ const images = [
     alt: "Hiekkapuhallettu vanne valmiina käsittelyyn",
     label: "OIKAISU",
     aspect: "aspect-[3/4]",
+    href: "/vanteenoikaisu",
   },
   {
     src: "/images/sandblasting.jpg",
@@ -30,6 +31,7 @@ const images = [
     label: "Hiekkapuhallus /",
     labelLine2: "Kemiallinen maalinpoisto",
     aspect: "aspect-[4/5]",
+    href: "/maalinpoisto",
   },
 ]
 

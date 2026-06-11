@@ -76,7 +76,7 @@ export function Nav() {
                   { label: "Kiilloitus", href: "/kiilloitus" },
                   { label: "Maalaus", href: "/maalaus" },
                   { label: "Oikaisu", href: "/vanteenoikaisu" },
-                  { label: "Maalinpoisto", href: "#palvelut" },
+                  { label: "Maalinpoisto", href: "/maalinpoisto" },
                 ].map((sub) => (
                   <a
                     key={sub.label}
@@ -163,7 +163,7 @@ export function Nav() {
           { label: "Kiilloitus",   href: "/kiilloitus" },
           { label: "Maalaus",      href: "/maalaus" },
           { label: "Oikaisu",      href: "/vanteenoikaisu" },
-          { label: "Maalinpoisto", href: "#palvelut" },
+          { label: "Maalinpoisto", href: "/maalinpoisto" },
           { label: "Hinnasto",     href: "#hinnasto" },
           { label: "Galleria",     href: "#galleria" },
           { label: "Yhteystiedot", href: "#yhteystiedot" },
