@@ -120,7 +120,7 @@ function HeroSection() {
       {/* Background video */}
       <div className="absolute inset-0 anim-cut-in" style={d(100)} aria-hidden="true">
         <video
-          src="/images/maalaus.mp4"
+          src="/images/maalaus.web.mp4"
           autoPlay
           loop
           muted
