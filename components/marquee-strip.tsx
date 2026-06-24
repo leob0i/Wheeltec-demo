@@ -4,6 +4,7 @@ export function MarqueeStrip() {
     "Kiilloitus",
     "Hitsaus",
     "Vanteet",
+    "TILAUSTYÖT",
   ]
 
   return (

@@ -28,16 +28,14 @@ const images = [
   {
     src: "/images/hitsattuvanne.webp",
     alt: "Vanteen korjaus ja hitsaus",
-    label: "Vanteen korjaus /",
-    labelLine2: "Hitsaus",
+    label: "VANTEEN KORJAUS",
     aspect: "aspect-[3/4]",
     href: "/vanteenkorjaus",
   },
   {
     src: "/images/sandblasting.jpg",
     alt: "Oikaistu ja kiillotettu vanne valmiina toimitukseen",
-    label: "Hiekkapuhallus /",
-    labelLine2: "Kemiallinen maalinpoisto",
+    label: "LIAN POISTO",
     aspect: "aspect-[4/5]",
     href: "/maalinpoisto",
   },
@@ -200,8 +198,7 @@ export function HeroImages() {
         </button>
       </div>
 
-      {/* Bottom divider */}
-      <div className="h-[1px] bg-border" />
+
     </section>
   )
 }
@@ -228,10 +225,10 @@ function DesktopCard({ img }: { img: (typeof images)[0] }) {
       {/* Corner accents (hover) */}
       <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-accent/0 group-hover:border-accent transition-colors duration-300" />
 
-      {/* Label inside image */}
-      <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 md:px-5 md:pb-5 z-[1]">
-        <div className="bg-background/75 backdrop-blur-[4px] inline-block px-3.5 py-2.5 md:px-4 md:py-3">
-          <span className="font-sans text-foreground text-xl md:text-2xl lg:text-[1.6rem] tracking-tighter leading-tight font-light block">
+      {/* Label flush at card bottom */}
+      <div className="absolute bottom-0 left-0 right-0 z-[1]">
+        <div className="bg-background/80 backdrop-blur-[4px] px-4 py-3 md:px-5 md:py-4 flex items-end justify-between gap-2">
+          <span className="font-sans text-foreground text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-none font-light block">
             {img.label}
             {img.labelLine2 && (
               <>
@@ -240,19 +237,19 @@ function DesktopCard({ img }: { img: (typeof images)[0] }) {
               </>
             )}
           </span>
-        </div>
-        <div className="flex items-center gap-1.5 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="h-[1px] w-4 bg-accent" />
-          <svg
-            width="9"
-            height="9"
-            viewBox="0 0 12 12"
-            fill="none"
-            className="text-accent"
-            aria-hidden="true"
-          >
-            <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
+          <div className="flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shrink-0 pb-1">
+            <div className="h-[1px] w-4 bg-accent" />
+            <svg
+              width="9"
+              height="9"
+              viewBox="0 0 12 12"
+              fill="none"
+              className="text-accent"
+              aria-hidden="true"
+            >
+              <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -286,10 +283,10 @@ function MobileCard({
         {/* Accent bar */}
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-accent" />
 
-        {/* Label inside */}
-        <div className="absolute bottom-0 left-0 right-0 px-3 pb-3 z-[1]">
-          <div className="bg-background/75 backdrop-blur-[4px] inline-block px-3 py-2">
-            <span className="font-sans text-foreground text-base md:text-lg tracking-tighter leading-tight font-light block">
+        {/* Label flush at card bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-[1]">
+          <div className="bg-background/80 backdrop-blur-[4px] px-3 py-2.5 flex items-end justify-between gap-2">
+            <span className="font-sans text-foreground text-2xl tracking-tighter leading-none font-light block">
               {img.label}
               {img.labelLine2 && (
                 <>
@@ -298,12 +295,12 @@ function MobileCard({
                 </>
               )}
             </span>
-          </div>
-          <div className="flex items-center gap-1 mt-1.5">
-            <div className="h-[1px] w-3 bg-accent" />
-            <svg width="8" height="8" viewBox="0 0 12 12" fill="none" className="text-accent" aria-hidden="true">
-              <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
+            <div className="flex items-center gap-1 shrink-0 pb-0.5">
+              <div className="h-[1px] w-3 bg-accent" />
+              <svg width="8" height="8" viewBox="0 0 12 12" fill="none" className="text-accent" aria-hidden="true">
+                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
