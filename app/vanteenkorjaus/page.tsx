@@ -26,7 +26,6 @@ export default function VanteenKorjausPage() {
       <Nav />
       <HeroSection />
       <WhatIsSection />
-      <QualitySection />
       <CtaSection />
       <Footer />
     </main>
@@ -84,7 +83,7 @@ function HeroSection() {
               className="font-sans text-[18vw] sm:text-[17vw] md:text-[14vw] lg:text-[12vw] leading-none tracking-[-0.04em] uppercase anim-shutter-up shimmer-text"
               style={d(400)}
             >
-              Hitsaus
+              Vanteen korjaus
             </h1>
           </div>
 
@@ -105,7 +104,7 @@ function HeroSection() {
             className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in"
             style={d(800)}
           >
-            Vanteiden pienet halkeamat voidaan usein korjata turvallisesti ja kestävästi, kun työ tehdään oikein ja oikeilla menetelmillä.
+            Korjaamme vanteiden halkeamat ja naarmut turvallisesti ja kestävästi.
           </p>
 
           {/* CTAs */}
@@ -173,7 +172,7 @@ function WhatIsSection() {
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              Vanteiden halkeamien<br />korjaus<span className="text-accent">.</span>
+              Laatu ja turvallisuus<br />aina edellä<span className="text-accent">.</span>
             </h2>
 
             <div
@@ -200,121 +199,13 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/sandblasting.jpg"
+              src="/images/rikkoutunutvanne.ennen.jalkeen.webp"
               alt="Vanteen halkeaman korjaus"
               fill
               className="object-cover"
             />
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
-
-function QualitySection() {
-  const ref = useRef<HTMLElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.1 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
-
-  const tarkistuslista = [
-    "halkeama on kunnolla käsitelty ja hitsattu",
-    "vanteen rakenteellinen kestävyys säilyy",
-    "vanne ei aiheuta tärinää tai epätasapainoa ajossa",
-    "tarvittaessa vanne oikaistaan ja tasapainotetaan",
-  ]
-
-  return (
-    <section
-      ref={ref}
-      className="relative px-4 md:px-8 lg:px-12 py-14 md:py-28 bg-card overflow-hidden"
-    >
-      <div
-        className="absolute top-6 md:top-8 right-2 md:right-12 font-sans text-[25vw] md:text-[18vw] leading-none text-foreground/[0.02] tracking-tighter select-none pointer-events-none"
-        aria-hidden="true"
-      >
-        02
-      </div>
-
-      <div className="max-w-[1400px] mx-auto relative">
-        <div
-          className={`mb-8 md:mb-14 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl tracking-tighter uppercase leading-none mb-4">
-            Laatu ja turvallisuus<br />aina edellä<span className="text-accent">.</span>
-          </h2>
-          <p
-            className={`font-mono text-[11px] md:text-sm text-foreground/60 max-w-2xl leading-relaxed transition-all duration-700 delay-100 ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-          >
-            Vannekorjauksessa tärkeintä on turvallisuus. Siksi jokainen työ arvioidaan tapauskohtaisesti – kaikkia vanteita ei ole järkevää tai turvallista korjata.
-          </p>
-        </div>
-
-        <div
-          className={`h-[1px] bg-foreground/10 mb-8 md:mb-12 transition-all duration-1000 origin-left ${
-            visible ? "scale-x-100" : "scale-x-0"
-          }`}
-        />
-
-        <div
-          className={`mb-6 md:mb-10 transition-all duration-700 delay-200 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <p className="font-mono text-[11px] md:text-sm text-foreground/70 leading-relaxed mb-6">
-            Kun vanne korjataan, varmistamme että:
-          </p>
-          <ul className="space-y-3 md:space-y-4">
-            {tarkistuslista.map((kohta, i) => (
-              <li
-                key={i}
-                className={`flex items-start gap-3 md:gap-4 transition-all duration-600 ${
-                  visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                }`}
-                style={{
-                  transitionDuration: "600ms",
-                  transitionDelay: visible ? `${300 + i * 100}ms` : "0ms",
-                }}
-              >
-                <span
-                  className="mt-1.5 w-1.5 h-1.5 shrink-0"
-                  style={{ background: "linear-gradient(135deg, #00F5C8, #009DFF)" }}
-                />
-                <span className="font-mono text-[11px] md:text-sm text-foreground/70 leading-relaxed">
-                  {kohta}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div
-          className={`h-[1px] bg-foreground/10 mt-8 md:mt-12 mb-6 md:mb-8 transition-all duration-1000 origin-left ${
-            visible ? "scale-x-100" : "scale-x-0"
-          }`}
-          style={{ transitionDelay: visible ? "600ms" : "0ms" }}
-        />
-
-        <p
-          className={`font-mono text-[11px] md:text-sm text-foreground/60 max-w-2xl leading-relaxed transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-          style={{ transitionDelay: visible ? "700ms" : "0ms" }}
-        >
-          Tavoitteena on aina mahdollisimman turvallinen ja huolellisesti viimeistelty lopputulos, joka kestää käyttöä.
-        </p>
       </div>
     </section>
   )
@@ -362,9 +253,13 @@ function CtaSection() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="font-sans text-[12vw] sm:text-5xl md:text-7xl tracking-tighter uppercase leading-[0.9] mb-8 md:mb-12">
+          <h2 className="font-sans text-[12vw] sm:text-5xl md:text-7xl tracking-tighter uppercase leading-[0.9] mb-4 md:mb-6">
             Tilaa<br className="md:hidden" /> korjaus<span className="text-accent">.</span>
           </h2>
+
+          <p className="font-mono text-[11px] md:text-sm text-foreground/60 max-w-xl leading-relaxed mb-8 md:mb-12">
+            Vannekorjauksessa tärkeintä on turvallisuus. Siksi jokainen työ arvioidaan tapauskohtaisesti – kaikkia vanteita ei ole järkevää tai turvallista korjata.
+          </p>
 
           {submitted ? (
             <div className="border border-accent/30 p-6 md:p-10 text-center">

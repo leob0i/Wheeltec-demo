@@ -19,7 +19,7 @@ const images = [
     href: "/maalaus",
   },
   {
-    src: "/images/vanneoikaisu.png",
+    src: "/images/kiero.vanne.webp",
     alt: "Hiekkapuhallettu vanne valmiina käsittelyyn",
     label: "OIKAISU",
     aspect: "aspect-[3/4]",
@@ -32,6 +32,14 @@ const images = [
     labelLine2: "Kemiallinen maalinpoisto",
     aspect: "aspect-[4/5]",
     href: "/maalinpoisto",
+  },
+  {
+    src: "/images/hitsattuvanne.webp",
+    alt: "Vanteen korjaus ja hitsaus",
+    label: "Vanteen korjaus /",
+    labelLine2: "Hitsaus",
+    aspect: "aspect-[3/4]",
+    href: "/vanteenkorjaus",
   },
 ]
 
@@ -84,10 +92,10 @@ export function HeroImages() {
 
       {/* Image Grid */}
       <div className="px-4 md:px-8 lg:px-12 pb-6 md:pb-20 max-w-[1400px] mx-auto w-full">
-        {/* Desktop: 4-column staggered */}
-        <div className="hidden md:grid grid-cols-4 gap-3">
+        {/* Desktop: 3-column staggered, 2 rows */}
+        <div className="hidden md:grid grid-cols-3 gap-3 md:gap-5">
           {images.map((img, i) => {
-            const offsets = [0, 48, 16, 64]
+            const offsets = [0, 48, 16, 32, 64]
             const Wrapper = img.href
               ? ({ children }: { children: React.ReactNode }) => <a href={img.href} className="relative group block" style={{ marginTop: `${offsets[i]}px` }}>{children}</a>
               : ({ children }: { children: React.ReactNode }) => <div className="relative group" style={{ marginTop: `${offsets[i]}px` }}>{children}</div>
