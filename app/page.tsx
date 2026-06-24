@@ -13,8 +13,8 @@ export default function Page() {
       <div className="noise-overlay" aria-hidden="true" />
 
       <Hero />
-      <HeroImages />
       <MarqueeStrip />
+      <HeroImages />
       <MetalParts />
       <ScheduleBlock />
       <CtaBlock />

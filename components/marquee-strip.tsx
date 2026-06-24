@@ -1,15 +1,9 @@
 export function MarqueeStrip() {
   const words = [
-    "TÄRYKIILLOTUS",
-    "JAUHEMAALAUS",
-    "HIEKKAPUHALLUS",
-    "KEMIALLINEN PESU",
-    "VANTEIDEN OIKAISU",
-    "CERAMIC POLISH",
-    "POWDER COAT",
-    "RIM REPAIR",
-    "SANDBLASTING",
-    "CHROME FINISH",
+    "Maalaus",
+    "Kiilloitus",
+    "Hitsaus",
+    "Vanteet",
   ]
 
   return (
