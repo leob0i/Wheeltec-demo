@@ -3,10 +3,14 @@
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
+const GETFORM_URL = "https://getform.io/f/lnias1u484c"
+
 export function CtaBlock() {
   const [visible, setVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
   const [fileName, setFileName] = useState<string | null>(null)
 
   useEffect(() => {
@@ -23,9 +27,27 @@ export function CtaBlock() {
     setFileName(file ? file.name : null)
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError(false)
+    try {
+      const fd = new FormData(e.currentTarget)
+      const res = await fetch(GETFORM_URL, {
+        method: "POST",
+        body: fd,
+        headers: { Accept: "application/json" },
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -54,12 +76,28 @@ export function CtaBlock() {
               <p className="font-mono text-[9px] md:text-xs text-foreground/50">Otamme sinuun yhteyttä pian.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:gap-5">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-3 md:gap-5"
+              encType="multipart/form-data"
+            >
+              {/* Honeypot – boteille, ei ihmisille */}
+              <input
+                type="text"
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ display: "none" }}
+              />
+              <input type="hidden" name="service" value="Yleinen yhteydenotto" />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-5">
                 <div className="flex flex-col gap-1">
                   <label className="font-mono text-[8px] md:text-[10px] text-foreground/80 tracking-[0.2em] uppercase">Nimi</label>
                   <input
                     type="text"
+                    name="name"
                     required
                     placeholder="Matti Meikäläinen"
                     className="bg-transparent border border-foreground/40 focus:border-accent outline-none px-3 py-2.5 md:py-3 font-mono text-[11px] md:text-sm text-foreground placeholder:text-foreground/60 transition-colors"
@@ -69,6 +107,7 @@ export function CtaBlock() {
                   <label className="font-mono text-[8px] md:text-[10px] text-foreground/80 tracking-[0.2em] uppercase">Puhelin tai Sähköposti</label>
                   <input
                     type="text"
+                    name="contact"
                     required
                     placeholder="+358 40 000 0000"
                     className="bg-transparent border border-foreground/40 focus:border-accent outline-none px-3 py-2.5 md:py-3 font-mono text-[11px] md:text-sm text-foreground placeholder:text-foreground/60 transition-colors"
@@ -79,6 +118,7 @@ export function CtaBlock() {
               <div className="flex flex-col gap-1">
                 <label className="font-mono text-[8px] md:text-[10px] text-foreground/80 tracking-[0.2em] uppercase">Viesti</label>
                 <textarea
+                  name="message"
                   required
                   rows={4}
                   placeholder="Kerro toiveistasi – esim. vannemalli, väri tai muu käsittely..."
@@ -100,6 +140,7 @@ export function CtaBlock() {
                   <span className="font-mono text-[7px] md:text-[9px] text-foreground/60 tracking-[0.1em]">JPG · PNG · WEBP · PDF</span>
                   <input
                     type="file"
+                    name="file"
                     accept="image/*,.pdf"
                     onChange={handleFileChange}
                     className="sr-only"
@@ -107,12 +148,19 @@ export function CtaBlock() {
                 </label>
               </div>
 
+              {error && (
+                <p className="font-mono text-[9px] md:text-[10px] text-red-400 tracking-[0.1em]">
+                  Lähetys epäonnistui. Tarkista yhteys ja yritä uudelleen.
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center text-background font-mono text-[10px] md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase px-6 md:px-10 py-3.5 md:py-5 hover-glitch transition-transform hover:scale-[1.02] min-h-[48px] mt-1"
+                disabled={loading}
+                className="w-full inline-flex items-center justify-center text-background font-mono text-[10px] md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase px-6 md:px-10 py-3.5 md:py-5 hover-glitch transition-transform hover:scale-[1.02] min-h-[48px] mt-1 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 style={{ background: "linear-gradient(90deg, #00F5C8, #00E5D4, #00D9FF, #009DFF)" }}
               >
-                Lähetä Viesti
+                {loading ? "Lähetetään..." : "Lähetä Viesti"}
               </button>
             </form>
           )}
