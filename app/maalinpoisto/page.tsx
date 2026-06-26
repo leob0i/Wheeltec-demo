@@ -56,7 +56,6 @@ export default function MaalinpoistoPage() {
       <HeroSection />
       <WhatIsSection />
       <MethodsSection />
-      <BeforeAfterSection />
       <LogisticsSection />
       <CtaFormSection
         heading="maalinpoisto"
@@ -224,34 +223,18 @@ function WhatIsSection() {
             </div>
           </div>
 
-          {/* Right: images */}
+          {/* Right: image */}
           <div
-            className={`hidden lg:grid grid-cols-2 gap-2 aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
+            className={`relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            <div className="relative h-full">
-              <Image
-                src="/images/kultanen.vanne.webp"
-                alt="Hapettunut vanne ennen käsittelyä"
-                fill
-                className="object-cover"
-              />
-              <span className="absolute top-2 left-2 font-mono text-[8px] md:text-[10px] bg-background/80 text-foreground/60 tracking-[0.2em] uppercase px-2 py-1">
-                Ennen
-              </span>
-            </div>
-            <div className="relative h-full">
-              <Image
-                src="/images/kultanen.vanne.webp"
-                alt="Puhdas vanne ilman pohjamaalia ja hapettumia"
-                fill
-                className="object-cover"
-              />
-              <span className="absolute top-2 left-2 font-mono text-[8px] md:text-[10px] bg-background/80 text-accent tracking-[0.2em] uppercase px-2 py-1">
-                Jälkeen
-              </span>
-            </div>
+            <Image
+              src="/images/jarrusatulat ennen ja jälkeen..png"
+              alt="Jarrusatulat ennen ja jälkeen maalinpoiston"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

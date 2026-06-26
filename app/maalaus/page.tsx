@@ -276,8 +276,8 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/maalaus-info.jpg"
-              alt="Vanteiden maalaus"
+              src="/images/maalaus.jpeg"
+              alt="Maalattu vanne"
               fill
               className="object-cover"
             />
@@ -430,48 +430,33 @@ function PrepSection() {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-start">
-          <div
-            className={`transition-all duration-700 delay-100 ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
-          >
-            <h2 className="font-sans text-[11vw] sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter uppercase leading-none mb-6 md:mb-8">
-              Esikäsittely<br />ratkaisee<span className="text-accent">.</span>
-            </h2>
-            <p className="font-mono text-[11px] md:text-sm text-foreground leading-relaxed mb-4">
-              Maalaamme myös muut osat kuin vanteet — esimerkiksi venttiilikopat, jarrusatulat ja muut metalliset pienet osat käsitellään ja maalataan samalla huolella.
-            </p>
-            <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
-              Kaikki osat puhdistetaan vanhan maalin jäänteistä joko <span className="text-foreground">hiekkapuhalluksella</span> tai <span className="text-foreground">kemiallisella maalinpoistolla</span> — menetelmä valitaan materiaalin ja tilanteen mukaan. Tämä on se vaihe, jota ei oikaista.
-            </p>
-            <div className="flex flex-wrap items-center gap-3 mt-4">
-              <Link
-                href="/galleria"
-                className="inline-flex items-center font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors uppercase tracking-[0.15em] min-h-[40px] border border-foreground/10 hover:border-foreground/30 px-5 py-2.5"
-              >
-                Katso töitämme
-              </Link>
-              <Link
-                href="/maalinpoisto"
-                className="inline-flex items-center font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors uppercase tracking-[0.15em] min-h-[40px] border border-foreground/10 hover:border-foreground/30 px-5 py-2.5"
-              >
-                Lue lisää esikäsittelystä
-              </Link>
-            </div>
-          </div>
-
-          <div
-            className={`relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-200 ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
-          >
-            <Image
-              src="/images/maalaus-esikasittely.jpg"
-              alt="Esikäsittely ennen maalausta"
-              fill
-              className="object-cover"
-            />
+        <div
+          className={`transition-all duration-700 delay-100 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          <h2 className="font-sans text-[11vw] sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter uppercase leading-none mb-6 md:mb-8">
+            Esikäsittely<br />ratkaisee<span className="text-accent">.</span>
+          </h2>
+          <p className="font-mono text-[11px] md:text-sm text-foreground leading-relaxed mb-4">
+            Maalaamme myös muut osat kuin vanteet — esimerkiksi venttiilikopat, jarrusatulat ja muut metalliset pienet osat käsitellään ja maalataan samalla huolella.
+          </p>
+          <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
+            Kaikki osat puhdistetaan vanhan maalin jäänteistä joko <span className="text-foreground">hiekkapuhalluksella</span> tai <span className="text-foreground">kemiallisella maalinpoistolla</span> — menetelmä valitaan materiaalin ja tilanteen mukaan. Tämä on se vaihe, jota ei oikaista.
+          </p>
+          <div className="flex flex-wrap items-center gap-3 mt-4">
+            <Link
+              href="/galleria"
+              className="inline-flex items-center font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors uppercase tracking-[0.15em] min-h-[40px] border border-foreground/10 hover:border-foreground/30 px-5 py-2.5"
+            >
+              Katso töitämme
+            </Link>
+            <Link
+              href="/maalinpoisto"
+              className="inline-flex items-center font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors uppercase tracking-[0.15em] min-h-[40px] border border-foreground/10 hover:border-foreground/30 px-5 py-2.5"
+            >
+              Lue lisää esikäsittelystä
+            </Link>
           </div>
         </div>
       </div>
