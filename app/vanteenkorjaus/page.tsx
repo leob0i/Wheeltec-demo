@@ -27,10 +27,10 @@ export default function VanteenKorjausPage() {
       <Nav />
       <HeroSection />
       <WhatIsSection />
+      <EkoSection />
       <CtaFormSection
         heading="korjaus"
         serviceName="Vanteenkorjaus"
-        description="Vannekorjauksessa tärkeintä on turvallisuus. Siksi jokainen työ arvioidaan tapauskohtaisesti – kaikkia vanteita ei ole järkevää tai turvallista korjata."
         messagePlaceholder="Kerro vanteen koko, malli ja missä kohtaa halkeama on — sovitaan tarkka hinta arvion perusteella."
       />
       <Footer />
@@ -217,3 +217,38 @@ function WhatIsSection() {
   )
 }
 
+function EkoSection() {
+  return (
+    <section className="relative px-4 md:px-8 lg:px-12 py-10 md:py-16 overflow-hidden">
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/images/kultanen.vanne.webp"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+
+      <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div>
+          <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl tracking-tight uppercase leading-none mb-3 md:mb-4">
+            Kunnostus on ekoteko<span className="text-accent">.</span>
+          </h3>
+          <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
+            Vanteen korjaaminen uuden hankkimisen sijaan säästää materiaaleja ja vähentää hukkaa. Joka kunnostettu vanne on pieni mutta konkreettinen askel kohti vähemmän kuormittavaa autoilua.
+          </p>
+        </div>
+
+        <div className="border-l border-foreground/10 pl-8 md:pl-12">
+          <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl tracking-tight uppercase leading-none mb-3 md:mb-4">
+            Turvallisuus<span className="text-accent">.</span>
+          </h3>
+          <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
+            Vannekorjauksessa tärkeintä on turvallisuus. Siksi jokainen työ arvioidaan tapauskohtaisesti – kaikkia vanteita ei ole järkevää tai turvallista korjata.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}

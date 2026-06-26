@@ -92,28 +92,32 @@ export function Nav() {
           </div>
 
           {/* Muut linkit */}
-          {["Hinnasto", "Galleria", "Yhteystiedot"].map((item, i) => (
+          {[
+            { label: "Hinnasto", href: "#hinnasto" },
+            { label: "Galleria", href: "/galleria" },
+            { label: "Yhteystiedot", href: "#yhteystiedot" },
+          ].map((item, i) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="group relative font-mono text-[11px] tracking-[0.25em] text-foreground/50 hover:text-foreground transition-colors uppercase anim-cut-in"
               style={d(260 + i * 60)}
             >
-              {item}
+              {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
 
           <div className="w-[1px] h-3 bg-foreground/20" aria-hidden="true" />
 
-          <a href="https://www.instagram.com/wheeltec.oy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/40 hover:text-foreground transition-colors">
+          <a href="https://www.instagram.com/wheeltec.oy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/80 hover:text-foreground transition-colors">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
             </svg>
           </a>
-          <a href="https://www.tiktok.com/@wheeltec.oy" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-foreground/40 hover:text-foreground transition-colors">
+          <a href="https://www.tiktok.com/@wheeltec.oy" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-foreground/80 hover:text-foreground transition-colors">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
             </svg>
@@ -164,10 +168,10 @@ export function Nav() {
           { label: "Kiilloitus",   href: "/kiilloitus" },
           { label: "Maalaus",      href: "/maalaus" },
           { label: "Oikaisu",      href: "/vanteenoikaisu" },
-          { label: "Maalinpoisto", href: "/maalinpoisto" },
           { label: "Korjaus",      href: "/vanteenkorjaus" },
+          { label: "Maalinpoisto", href: "/maalinpoisto" },
           { label: "Hinnasto",     href: "#hinnasto" },
-          { label: "Galleria",     href: "#galleria" },
+          { label: "Galleria",     href: "/galleria" },
           { label: "Yhteystiedot", href: "#yhteystiedot" },
         ].map((item) => (
           <a
@@ -180,14 +184,14 @@ export function Nav() {
           </a>
         ))}
         <div className="flex items-center gap-6 mt-2">
-          <a href="https://www.instagram.com/wheeltec.oy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onClick={() => setMenuOpen(false)} className="text-foreground/50 hover:text-accent transition-colors p-2">
+          <a href="https://www.instagram.com/wheeltec.oy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onClick={() => setMenuOpen(false)} className="text-foreground/80 hover:text-accent transition-colors p-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
             </svg>
           </a>
-          <a href="https://www.tiktok.com/@wheeltec.oy" target="_blank" rel="noopener noreferrer" aria-label="TikTok" onClick={() => setMenuOpen(false)} className="text-foreground/50 hover:text-accent transition-colors p-2">
+          <a href="https://www.tiktok.com/@wheeltec.oy" target="_blank" rel="noopener noreferrer" aria-label="TikTok" onClick={() => setMenuOpen(false)} className="text-foreground/80 hover:text-accent transition-colors p-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
             </svg>
