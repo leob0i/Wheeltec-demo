@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 
-const GETFORM_URL = "https://getform.io/f/lnias1u484c"
+const CONTACT_URL = "/api/contact"
 
 interface CtaFormSectionProps {
   heading: string
@@ -43,10 +43,9 @@ export function CtaFormSection({
     setError(false)
     try {
       const fd = new FormData(e.currentTarget)
-      const res = await fetch(GETFORM_URL, {
+      const res = await fetch(CONTACT_URL, {
         method: "POST",
         body: fd,
-        headers: { Accept: "application/json" },
       })
       if (res.ok) {
         setSubmitted(true)
@@ -129,16 +128,28 @@ export function CtaFormSection({
                 </div>
                 <div className="flex flex-col gap-1">
                   <label className="font-mono text-[8px] md:text-[10px] text-foreground/80 tracking-[0.2em] uppercase">
-                    Puhelin tai sähköposti
+                    Sähköposti
                   </label>
                   <input
-                    type="text"
-                    name="contact"
+                    type="email"
+                    name="email"
                     required
-                    placeholder="+358 40 000 0000"
+                    placeholder="matti@esimerkki.fi"
                     className="bg-transparent border border-foreground/40 focus:border-accent outline-none px-3 py-2.5 md:py-3 font-mono text-[11px] md:text-sm text-foreground placeholder:text-foreground/30 transition-colors"
                   />
                 </div>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label className="font-mono text-[8px] md:text-[10px] text-foreground/80 tracking-[0.2em] uppercase">
+                  Puhelinnumero (vapaaehtoinen)
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+358 40 000 0000"
+                  className="bg-transparent border border-foreground/40 focus:border-accent outline-none px-3 py-2.5 md:py-3 font-mono text-[11px] md:text-sm text-foreground placeholder:text-foreground/30 transition-colors"
+                />
               </div>
 
               <div className="flex flex-col gap-1">
