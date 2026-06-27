@@ -271,7 +271,7 @@ function WhatIsSection() {
 
           {/* Right: image */}
           <div
-            className={`hidden lg:block relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
+            className={`relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >

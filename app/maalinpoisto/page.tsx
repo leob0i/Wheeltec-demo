@@ -111,7 +111,7 @@ function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-end px-4 md:px-8 lg:px-12 pb-16 md:pb-24">
-        <div className="max-w-[1400px] mx-auto w-full text-center md:text-left">
+        <div className="max-w-[1400px] mx-auto w-full text-left">
           {/* Headline */}
           <div className="overflow-hidden mb-3 md:mb-4">
             <h1
@@ -124,19 +124,18 @@ function HeroSection() {
 
           {/* Tagline */}
           <div
-            className="flex items-center justify-center md:justify-start gap-3 mb-3 md:mb-5 anim-wipe-right"
+            className="flex items-center justify-start gap-3 mb-3 md:mb-5 anim-wipe-right"
             style={d(550)}
           >
             <div className="h-[1.5px] w-6 md:w-16 bg-accent" />
             <span className="font-mono text-[10px] md:text-xs text-accent tracking-[0.2em] md:tracking-[0.4em] uppercase">
               Koko Suomi / Lappeenranta
             </span>
-            <div className="h-[1.5px] w-6 bg-accent md:hidden" />
           </div>
 
           {/* Copy */}
           <p
-            className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in"
+            className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md leading-relaxed anim-cut-in"
             style={d(800)}
           >
             Kemiallinen maalinpoisto ja hiekkapuhallus — pinta puhtaaksi ja valmiiksi maalausta tai pinnoitusta varten.
@@ -144,7 +143,7 @@ function HeroSection() {
 
           {/* CTAs */}
           <div
-            className="flex items-center justify-center md:justify-start gap-3 mt-5 md:mt-8 anim-cut-in"
+            className="flex items-center justify-start gap-3 mt-5 md:mt-8 anim-cut-in"
             style={d(950)}
           >
             <a

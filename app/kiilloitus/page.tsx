@@ -87,7 +87,6 @@ export default function KiilloitusPage() {
         serviceName="Tärykiilloitus"
         messagePlaceholder="Pyydä tarjous, sovi vanteen huolto tai kysy lisää — kerro minkä käsittelyn tarvitset ja mille vanteille."
       />
-      <ProcessSection />
       <Footer />
     </main>
   )
@@ -137,7 +136,7 @@ function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-end px-4 md:px-8 lg:px-12 pb-16 md:pb-24">
-        <div className="max-w-[1400px] mx-auto w-full text-center md:text-left">
+        <div className="max-w-[1400px] mx-auto w-full text-left">
           {/* Headline with metallic shimmer */}
           <div className="overflow-hidden mb-3 md:mb-4">
             <h1
@@ -150,19 +149,18 @@ function HeroSection() {
 
           {/* Tagline */}
           <div
-            className="flex items-center justify-center md:justify-start gap-3 mb-3 md:mb-5 anim-wipe-right"
+            className="flex items-center justify-start gap-3 mb-3 md:mb-5 anim-wipe-right"
             style={d(550)}
           >
             <div className="h-[1.5px] w-6 md:w-16 bg-accent" />
             <span className="font-mono text-[10px] md:text-xs text-accent tracking-[0.2em] md:tracking-[0.4em] uppercase">
               Koko Suomi / Lappeenranta
             </span>
-            <div className="h-[1.5px] w-6 bg-accent md:hidden" />
           </div>
 
           {/* Copy */}
           <p
-            className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in"
+            className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md leading-relaxed anim-cut-in"
             style={d(800)}
           >
             Tärykiilloitus tuo esiin metallin alkuperäisen loiston — tulos joka näkyy, tuntuu ja kestää vuosia.
@@ -170,7 +168,7 @@ function HeroSection() {
 
           {/* CTAs */}
           <div
-            className="flex items-center justify-center md:justify-start gap-3 mt-5 md:mt-8 anim-cut-in"
+            className="flex items-center justify-start gap-3 mt-5 md:mt-8 anim-cut-in"
             style={d(950)}
           >
             <a
@@ -395,63 +393,6 @@ function ServicesSection() {
           <span className="font-mono text-[6px] md:text-[10px] text-foreground/25 tracking-[0.1em] md:tracking-[0.2em] hidden md:block">
             Hinnat ovat suuntaa-antavia. Lopullinen hinta sovitaan arvion perusteella.
           </span>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function ProcessSection() {
-  const ref = useRef<HTMLElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.1 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
-
-  return (
-    <section
-      ref={ref}
-      className="px-4 md:px-8 lg:px-12 pt-0 pb-10 md:pb-14 bg-card border-t border-foreground/[0.06]"
-    >
-      <div className="max-w-[1400px] mx-auto">
-        <div
-          className={`flex items-center gap-3 py-7 md:py-9 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <div className="h-[1px] w-8 bg-accent shrink-0" />
-          <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] uppercase">
-            Miten se tehdään
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-foreground/[0.07]">
-          {prosessi.map((step, i) => (
-            <div
-              key={step.n}
-              className={`bg-card p-5 md:p-6 transition-all duration-700 ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
-              style={{ transitionDelay: visible ? `${100 + i * 80}ms` : "0ms" }}
-            >
-              <div
-                className="h-[2px] w-6 mb-3"
-                style={{ background: "linear-gradient(90deg, #00F5C8, #009DFF)" }}
-              />
-              <h3 className="font-sans text-lg md:text-xl tracking-tighter uppercase mb-1.5">
-                {step.otsikko}
-              </h3>
-              <p className="font-mono text-[9px] md:text-[10px] text-foreground/50 leading-relaxed">
-                {step.teksti}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

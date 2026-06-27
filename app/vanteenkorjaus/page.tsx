@@ -82,7 +82,7 @@ function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-end px-4 md:px-8 lg:px-12 pb-16 md:pb-24">
-        <div className="max-w-[1400px] mx-auto w-full text-center md:text-left">
+        <div className="max-w-[1400px] mx-auto w-full text-left">
           {/* Headline */}
           <div className="overflow-hidden mb-3 md:mb-4">
             <h1
@@ -95,19 +95,18 @@ function HeroSection() {
 
           {/* Tagline */}
           <div
-            className="flex items-center justify-center md:justify-start gap-3 mb-3 md:mb-5 anim-wipe-right"
+            className="flex items-center justify-start gap-3 mb-3 md:mb-5 anim-wipe-right"
             style={d(550)}
           >
             <div className="h-[1.5px] w-6 md:w-16 bg-accent" />
             <span className="font-mono text-[10px] md:text-xs text-accent tracking-[0.2em] md:tracking-[0.4em] uppercase">
               Koko Suomi / Lappeenranta
             </span>
-            <div className="h-[1.5px] w-6 bg-accent md:hidden" />
           </div>
 
           {/* Copy */}
           <p
-            className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md mx-auto md:mx-0 leading-relaxed anim-cut-in"
+            className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md leading-relaxed anim-cut-in"
             style={d(800)}
           >
             Korjaamme vanteiden halkeamat ja naarmut turvallisesti ja kestävästi.
@@ -115,7 +114,7 @@ function HeroSection() {
 
           {/* CTAs */}
           <div
-            className="flex items-center justify-center md:justify-start gap-3 mt-5 md:mt-8 anim-cut-in"
+            className="flex items-center justify-start gap-3 mt-5 md:mt-8 anim-cut-in"
             style={d(950)}
           >
             <a
@@ -170,11 +169,11 @@ function WhatIsSection() {
       </div>
 
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+        <div className="grid grid-cols-2 gap-4 lg:gap-20 items-start">
           {/* Left: text */}
           <div>
             <h2
-              className={`font-sans text-[13vw] sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none mb-5 md:mb-8 transition-all duration-700 delay-100 ${
+              className={`font-sans text-[6vw] sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none mb-3 md:mb-8 transition-all duration-700 delay-100 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -182,17 +181,17 @@ function WhatIsSection() {
             </h2>
 
             <div
-              className={`space-y-4 transition-all duration-700 delay-200 ${
+              className={`space-y-2 md:space-y-4 transition-all duration-700 delay-200 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
+              <p className="font-mono text-[9px] md:text-sm text-foreground/60 leading-relaxed">
                 Vanteiden pienet halkeamat voidaan usein korjata turvallisesti ja kestävästi, kun työ tehdään oikein ja oikeilla menetelmillä.
               </p>
-              <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
+              <p className="font-mono text-[9px] md:text-sm text-foreground/60 leading-relaxed hidden md:block">
                 Me korjaamme vanteiden halkeamat huolellisesti TIG-hitsausta tai muuta soveltuvaa menetelmää käyttäen vanteen materiaalista riippuen. Jokainen korjaus tehdään niin, että lopputulos on mahdollisimman kestävä ja turvallinen ajokäyttöön.
               </p>
-              <p className="font-mono text-[11px] md:text-sm text-foreground leading-relaxed">
+              <p className="font-mono text-[9px] md:text-sm text-foreground leading-relaxed hidden md:block">
                 Halkeaman korjauksen jälkeen vanne tarkastetaan huolellisesti ja tarvittaessa oikaistaan ja tasapainotetaan, jotta se vastaa alkuperäistä ajettavuutta mahdollisimman hyvin.
               </p>
             </div>
@@ -200,7 +199,7 @@ function WhatIsSection() {
 
           {/* Right: image */}
           <div
-            className={`hidden lg:block relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
+            className={`relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
