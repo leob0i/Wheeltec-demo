@@ -87,6 +87,12 @@ export function CtaFormSection({
             </p>
           )}
 
+          <p className="font-mono text-[11px] md:text-sm text-foreground/60 mb-6 md:mb-8">
+            Kiireellisissä asioissa voit myös soittaa meille{" "}
+            <a href="tel:+358401819581" className="text-accent hover:underline">+358401819581</a>.{" "}
+            Voit toimittaa osat suoraan Wheeltecille tai lähettää ne meille postitse tai Matkahuollon kautta. Käsittelyn jälkeen osat voidaan noutaa tai lähettää takaisin asiakkaalle.
+          </p>
+
           {submitted ? (
             <div className="border border-accent/30 p-6 md:p-10 text-center">
               <span className="font-mono text-[10px] md:text-sm text-accent tracking-[0.2em] uppercase block mb-2">
