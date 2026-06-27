@@ -107,10 +107,10 @@ function HeroSection() {
           {/* Headline */}
           <div className="overflow-hidden mb-3 md:mb-4">
             <h1
-              className="font-sans text-[18vw] sm:text-[17vw] md:text-[14vw] lg:text-[12vw] leading-none tracking-[-0.04em] uppercase anim-shutter-up shimmer-text"
+              className="font-sans text-[11vw] sm:text-[11vw] md:text-[10vw] lg:text-[8.5vw] leading-none tracking-[-0.04em] uppercase anim-shutter-up shimmer-text"
               style={d(400)}
             >
-              Oikaisu
+              Vanteenoikaisu
             </h1>
           </div>
 

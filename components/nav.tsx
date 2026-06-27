@@ -75,8 +75,8 @@ export function Nav() {
                 {[
                   { label: "Kiilloitus", href: "/kiilloitus" },
                   { label: "Maalaus", href: "/maalaus" },
-                  { label: "Vanteen oikaisu", href: "/vanteenoikaisu" },
-                  { label: "Vanteen korjaus", href: "/vanteenkorjaus" },
+                  { label: "Vanteenoikaisu", href: "/vanteenoikaisu" },
+                  { label: "Vanteenkorjaus", href: "/vanteenkorjaus" },
                   { label: "Maalinpoisto", href: "/maalinpoisto" },
                 ].map((sub) => (
                   <a
@@ -167,8 +167,8 @@ export function Nav() {
         {[
           { label: "Kiilloitus",   href: "/kiilloitus" },
           { label: "Maalaus",      href: "/maalaus" },
-          { label: "Vanteen oikaisu", href: "/vanteenoikaisu" },
-          { label: "Vanteen korjaus", href: "/vanteenkorjaus" },
+          { label: "Vanteenoikaisu", href: "/vanteenoikaisu" },
+          { label: "Vanteenkorjaus", href: "/vanteenkorjaus" },
           { label: "Maalinpoisto", href: "/maalinpoisto" },
           { label: "Hinnasto",     href: "#hinnasto" },
           { label: "Galleria",     href: "/galleria" },

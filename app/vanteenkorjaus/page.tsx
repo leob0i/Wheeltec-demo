@@ -86,10 +86,10 @@ function HeroSection() {
           {/* Headline */}
           <div className="overflow-hidden mb-3 md:mb-4">
             <h1
-              className="font-sans text-[18vw] sm:text-[17vw] md:text-[14vw] lg:text-[12vw] leading-none tracking-[-0.04em] uppercase anim-shutter-up shimmer-text"
+              className="font-sans text-[11vw] sm:text-[11vw] md:text-[10vw] lg:text-[8.5vw] leading-none tracking-[-0.04em] uppercase anim-shutter-up shimmer-text"
               style={d(400)}
             >
-              Vanteen korjaus
+              Vanteenkorjaus
             </h1>
           </div>
 
@@ -169,11 +169,11 @@ function WhatIsSection() {
       </div>
 
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-2 gap-4 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left: text */}
           <div>
             <h2
-              className={`font-sans text-[6vw] sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none mb-3 md:mb-8 transition-all duration-700 delay-100 ${
+              className={`font-sans text-[13vw] sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none mb-5 md:mb-8 transition-all duration-700 delay-100 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -181,25 +181,25 @@ function WhatIsSection() {
             </h2>
 
             <div
-              className={`space-y-2 md:space-y-4 transition-all duration-700 delay-200 ${
+              className={`space-y-4 transition-all duration-700 delay-200 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <p className="font-mono text-[9px] md:text-sm text-foreground/60 leading-relaxed">
+              <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
                 Vanteiden pienet halkeamat voidaan usein korjata turvallisesti ja kestävästi, kun työ tehdään oikein ja oikeilla menetelmillä.
               </p>
-              <p className="font-mono text-[9px] md:text-sm text-foreground/60 leading-relaxed hidden md:block">
+              <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
                 Me korjaamme vanteiden halkeamat huolellisesti TIG-hitsausta tai muuta soveltuvaa menetelmää käyttäen vanteen materiaalista riippuen. Jokainen korjaus tehdään niin, että lopputulos on mahdollisimman kestävä ja turvallinen ajokäyttöön.
               </p>
-              <p className="font-mono text-[9px] md:text-sm text-foreground leading-relaxed hidden md:block">
+              <p className="font-mono text-[11px] md:text-sm text-foreground leading-relaxed">
                 Halkeaman korjauksen jälkeen vanne tarkastetaan huolellisesti ja tarvittaessa oikaistaan ja tasapainotetaan, jotta se vastaa alkuperäistä ajettavuutta mahdollisimman hyvin.
               </p>
             </div>
           </div>
 
-          {/* Right: image */}
+          {/* Right: image — desktop only */}
           <div
-            className={`relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
+            className={`hidden lg:block relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
@@ -221,10 +221,16 @@ function EkoSection() {
     <section className="relative px-4 md:px-8 lg:px-12 py-10 md:py-16 overflow-hidden">
       <div className="absolute inset-0" aria-hidden="true">
         <Image
+          src="/images/rikkoutunutvanne.ennen.jalkeen.webp"
+          alt=""
+          fill
+          className="object-cover md:hidden"
+        />
+        <Image
           src="/images/kultanen.vanne.webp"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover hidden md:block"
         />
         <div className="absolute inset-0 bg-background/80" />
       </div>
@@ -239,7 +245,7 @@ function EkoSection() {
           </p>
         </div>
 
-        <div className="border-l border-foreground/10 pl-8 md:pl-12">
+        <div className="md:border-l md:border-foreground/10 md:pl-12">
           <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl tracking-tight uppercase leading-none mb-3 md:mb-4">
             Turvallisuus<span className="text-accent">.</span>
           </h3>
