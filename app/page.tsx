@@ -4,6 +4,7 @@ import { MarqueeStrip } from "@/components/marquee-strip"
 import { MetalParts } from "@/components/metal-parts"
 import { ScheduleBlock } from "@/components/schedule-block"
 import { CtaBlock } from "@/components/cta-block"
+import { LogisticsSection } from "@/components/logistics-section"
 import { Footer } from "@/components/footer"
 
 export default function Page() {
@@ -17,6 +18,7 @@ export default function Page() {
       <HeroImages />
       <MetalParts />
       <ScheduleBlock />
+      <LogisticsSection />
       <CtaBlock />
       <Footer />
     </main>
