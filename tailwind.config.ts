@@ -65,6 +65,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-bebas)', 'sans-serif'],
         mono: ['var(--font-jetbrains)', 'monospace'],
+        serif: ['var(--font-cormorant)', 'serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

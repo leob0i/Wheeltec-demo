@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Bebas_Neue, JetBrains_Mono } from 'next/font/google'
+import { Bebas_Neue, JetBrains_Mono, Playfair_Display } from 'next/font/google'
 import { JsonLd } from '@/components/json-ld'
 
 import './globals.css'
@@ -14,6 +14,13 @@ const _bebasNeue = Bebas_Neue({
 const _jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains',
+})
+
+const _playfairDisplay = Playfair_Display({
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-cormorant',
 })
 
 const BASE_URL = 'https://www.wheeltec.fi'
@@ -90,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fi" className={`${_bebasNeue.variable} ${_jetbrainsMono.variable}`}>
+    <html lang="fi" className={`${_bebasNeue.variable} ${_jetbrainsMono.variable} ${_playfairDisplay.variable}`}>
       <body className="font-mono antialiased overflow-x-hidden">
         <JsonLd />
         {children}

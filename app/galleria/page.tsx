@@ -154,19 +154,14 @@ export default function GalleriaPage() {
               </h1>
             </div>
 
-            <div className="overflow-hidden mb-4 md:mb-6">
+            <div className="overflow-hidden mb-5 md:mb-7">
               <h2
-                className="font-sans text-xl md:text-3xl lg:text-4xl leading-none tracking-[0.15em] md:tracking-[0.25em] uppercase text-foreground/80 anim-shutter-up"
-                style={d(550)}
+                className="text-base md:text-xl lg:text-2xl leading-none uppercase text-foreground/90 anim-shutter-up"
+                style={{ ...d(550), letterSpacing: "0.1em", fontFamily: "'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif" }}
               >
-                WHEEL TEC
+                Wheel Tec
               </h2>
             </div>
-
-            <div
-              className="h-[1px] w-20 mb-5 md:mb-7 anim-width-expand"
-              style={{ ...d(650), background: "linear-gradient(90deg, #00F5C8, #009DFF)" }}
-            />
 
             <p
               className="font-mono text-[11px] md:text-[13px] text-foreground/55 max-w-[90vw] md:max-w-2xl leading-relaxed anim-cut-in"
@@ -222,10 +217,6 @@ export default function GalleriaPage() {
           </div>
         </div>
 
-        <div
-          className="absolute bottom-0 left-0 h-[1px] w-full anim-width-expand"
-          style={{ ...d(700), background: "linear-gradient(90deg, #00F5C8, #00D9FF, #009DFF)" }}
-        />
       </section>
 
       {/* ── GRID 1 – 4 kuvaa ── */}
