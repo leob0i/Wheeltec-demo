@@ -12,15 +12,15 @@ function d(ms: number): React.CSSProperties {
 const grid1 = [
   { src: "/gallery/maalattu.kultainen.vanne.png",        alt: "Maalattu kultainen vanne" },
   { src: "/gallery/maalattu.kultainen.vanne.edesta.png", alt: "Kultainen vanne edestä" },
-  { src: "/gallery/chrominen.vanne.png",                 alt: "Chrominen vanne" },
-  { src: "/gallery/porshe.png",                          alt: "Porsche vanne" },
+  { src: "/gallery/glitteri.sininen.vanne.png",          alt: "Glitteri sininen vanne" },
+  { src: "/gallery/venttiilikoppa.glitteri.png",         alt: "Venttiilikoppa glitteri" },
 ]
 
 const quoteImage = "/gallery/porshe.png"
 
 const grid2 = [
   { src: "/gallery/maalattu.kultainen.vanne.lahi.png",              alt: "Kultainen vanne lähikuva" },
-  { src: "/gallery/maalattu.kultainen.vanne.keskio.png",            alt: "Kultainen vanne keskiö" },
+  { src: "/gallery/pinkkimaalattu.keskio.png",                      alt: "Pinkki maalattu keskiö" },
   { src: "/gallery/khromi.vanne.png",                               alt: "Kromi vanne" },
   { src: "/gallery/porsche.maalattujarrusatula.2.png",              alt: "Porsche maalattu jarrusatula" },
 ]
@@ -28,10 +28,10 @@ const grid2 = [
 const wideImage = { src: "/gallery/tarralipassa.kultachromi.vanne.png", alt: "Kulta-chromi vanne" }
 
 const grid3 = [
-  { src: "/gallery/maalattu.kultainen.vanne.ylhaalta.png",          alt: "Kultainen vanne ylhäältä" },
-  { src: "/gallery/maalattu.kulatine.vanne.todella.lahi.kuva.png",  alt: "Kultainen vanne todella lähikuva" },
-  { src: "/gallery/maalatut.kultaiset.vanteen.kumeilla.png",        alt: "Kultaiset vanteen kumeineen" },
-  { src: "/gallery/tarykiillotus.kesken.png",                       alt: "Tärykiillotus" },
+  { src: "/gallery/maalattu.kultainen.vanne.ylhaalta.png",  alt: "Kultainen vanne ylhäältä" },
+  { src: "/gallery/lippa.png",                              alt: "Lippa" },
+  { src: "/gallery/chrominen. pieni.vanne.png",             alt: "Chrominen pieni vanne" },
+  { src: "/gallery/valkoisetkeskiot.vanne.png",             alt: "Valkoiset keskiöt vanne" },
 ]
 
 function GalleryGrid({ images }: { images: typeof grid1 }) {
@@ -169,7 +169,7 @@ export default function GalleriaPage() {
             >
               Me ei vaan tehdä – me viimeistellään. Joka vanne, maalipinta ja hitsaussauma käy läpi
               saman tarkkuuden ja laadun. Olemme ylpeitä jäljestämme – katso itse töitämme ja anna
-              laadun puhua puolestaan.
+              laadun puhua puolestaan. Käy katsomassa tekemisiämme someista!
             </p>
 
             {/* CTA buttons + some-ikonit samalla rivillä */}
@@ -244,11 +244,6 @@ export default function GalleriaPage() {
 
         <div className="relative z-10 px-4 md:px-8 lg:px-12 pb-16 md:pb-20 max-w-[1400px] w-full mx-auto">
 
-          <div className="flex items-center gap-3 mb-6">
-            <div className="h-[1.5px] w-8 bg-accent" />
-            <span className="font-mono text-[9px] text-accent tracking-[0.4em] uppercase">WheelTec</span>
-          </div>
-
           <p className="font-sans text-[6vw] sm:text-[4.5vw] md:text-[3.2vw] lg:text-[2.6vw] leading-[1.2] tracking-[-0.02em] text-foreground max-w-4xl">
             <span
               style={{
@@ -258,11 +253,12 @@ export default function GalleriaPage() {
                 backgroundClip: "text",
               }}
             >
-              Me ei vaan tehdä&nbsp;– me viimeistellään.
+              Wheeltec on Lappeenrannasta käsin toimiva vannepaja, jolle ulkonäkö ja jälki ratkaisevat.
             </span>{" "}
-            Joka vanne, joka maalipinta ja joka hitsaussauma käy läpi saman tarkkuuden ja laadun.
-            Olemme ylpeitä jäljestämme, koska tiedämme miltä viimeistelty työ näyttää!
-            Katso itse töitämme ja anna laadun puhua puolestaan.
+            Tärykiillotus, jauhemaalaus, hiekkapuhallus, kemiallinen maalinpoisto, vanteen oikaisu ja korjaus
+            – kaikki tehdään meillä itse, tarkalla kädellä ja parhailla materiaaleilla. Emme tee pelkkiä
+            vanteita, vaan myös moottorin osia ja muita metallikohteita. Tuo osasi sisään tai lähetä postissa
+            – me hoidamme loput laadulla, johon voi luottaa.
           </p>
 
           <div

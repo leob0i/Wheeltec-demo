@@ -88,9 +88,18 @@ export function Footer() {
             &copy; 2026 WHEELTEC. KAIKKI OIKEUDET PIDÄTETÄÄN.
           </span>
           <div className="flex items-center gap-4 md:gap-6">
-            {["Instagram", "Facebook", "YouTube"].map((social) => (
-              <a key={social} href="#" className="font-mono text-[8px] md:text-[10px] text-muted-foreground hover:text-accent transition-colors tracking-[0.1em] md:tracking-[0.15em] uppercase py-1 min-h-[32px] flex items-center">
-                {social}
+            {[
+              { name: "Instagram", href: "https://www.instagram.com/wheeltec.oy/" },
+              { name: "TikTok", href: "https://www.tiktok.com/@wheeltec.oy" },
+            ].map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[8px] md:text-[10px] text-muted-foreground hover:text-accent transition-colors tracking-[0.1em] md:tracking-[0.15em] uppercase py-1 min-h-[32px] flex items-center"
+              >
+                {social.name}
               </a>
             ))}
           </div>

@@ -420,31 +420,48 @@ function PrepSection() {
 
       <div className="max-w-[1400px] mx-auto relative">
         <div
-          className={`flex items-center gap-3 mb-8 md:mb-12 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <div className="h-[1px] w-8 bg-accent shrink-0" />
-          <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] uppercase">
-            Ennen maalausta
-          </span>
-        </div>
-
-        <div
           className={`transition-all duration-700 delay-100 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
           <h2 className="font-sans text-[11vw] sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter uppercase leading-none mb-6 md:mb-8">
-            Esikäsittely<br />ratkaisee<span className="text-accent">.</span>
+            Maalaamme muutkin kuin vanteet<span className="text-accent">.</span>
           </h2>
           <p className="font-mono text-[11px] md:text-sm text-foreground leading-relaxed mb-4">
             Maalaamme myös muut osat kuin vanteet — esimerkiksi venttiilikopat, jarrusatulat ja muut metalliset pienet osat käsitellään ja maalataan samalla huolella.
           </p>
+          <div
+            className={`flex items-center gap-3 my-6 md:my-8 transition-all duration-700 ${
+              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+          >
+            <div className="h-[1px] w-8 bg-accent shrink-0" />
+            <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.25em] uppercase">
+              Ennen maalausta
+            </span>
+          </div>
           <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
             Kaikki osat puhdistetaan vanhan maalin jäänteistä joko <span className="text-foreground">hiekkapuhalluksella</span> tai <span className="text-foreground">kemiallisella maalinpoistolla</span> — menetelmä valitaan materiaalin ja tilanteen mukaan. Tämä on se vaihe, jota ei oikaista.
           </p>
-          <div className="flex flex-wrap items-center gap-3 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/gallery/porsche.maalattujarrusatula.2.png"
+                alt="Maalattu jarrusatula"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/gallery/venttiilikoppa.glitteri.png"
+                alt="Glitterimaalattu venttiilikoppa"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 mt-6 md:mt-8">
             <Link
               href="/galleria"
               className="inline-flex items-center font-mono text-[11px] text-foreground/50 hover:text-foreground transition-colors uppercase tracking-[0.15em] min-h-[40px] border border-foreground/10 hover:border-foreground/30 px-5 py-2.5"
