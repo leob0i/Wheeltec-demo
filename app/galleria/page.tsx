@@ -10,28 +10,28 @@ function d(ms: number): React.CSSProperties {
 }
 
 const grid1 = [
-  { src: "/gallery/maalattu.kultainen.vanne.png",        alt: "Maalattu kultainen vanne" },
-  { src: "/gallery/maalattu.kultainen.vanne.edesta.png", alt: "Kultainen vanne edestä" },
-  { src: "/gallery/glitteri.sininen.vanne.png",          alt: "Glitteri sininen vanne" },
-  { src: "/gallery/venttiilikoppa.glitteri.png",         alt: "Venttiilikoppa glitteri" },
+  { src: "/gallery/maalattu.kultainen.vanne.webp",        alt: "Maalattu kultainen vanne" },
+  { src: "/gallery/maalattu.kultainen.vanne.edesta.webp", alt: "Kultainen vanne edestä" },
+  { src: "/gallery/glitteri.sininen.vanne.webp",          alt: "Glitteri sininen vanne" },
+  { src: "/gallery/venttiilikoppa.glitteri.webp",         alt: "Venttiilikoppa glitteri" },
 ]
 
-const quoteImage = "/gallery/porshe.png"
+const quoteImage = "/gallery/porshe.webp"
 
 const grid2 = [
-  { src: "/gallery/maalattu.kultainen.vanne.lahi.png",              alt: "Kultainen vanne lähikuva" },
-  { src: "/gallery/pinkkimaalattu.keskio.png",                      alt: "Pinkki maalattu keskiö" },
-  { src: "/gallery/khromi.vanne.png",                               alt: "Kromi vanne" },
-  { src: "/gallery/porsche.maalattujarrusatula.2.png",              alt: "Porsche maalattu jarrusatula" },
+  { src: "/gallery/maalattu.kultainen.vanne.lahi.webp",              alt: "Kultainen vanne lähikuva" },
+  { src: "/gallery/pinkkimaalattu.keskio.webp",                      alt: "Pinkki maalattu keskiö" },
+  { src: "/gallery/khromi.vanne.webp",                               alt: "Kromi vanne" },
+  { src: "/gallery/porsche.maalattujarrusatula.2.webp",              alt: "Porsche maalattu jarrusatula" },
 ]
 
-const wideImage = { src: "/gallery/tarralipassa.kultachromi.vanne.png", alt: "Kulta-chromi vanne" }
+const wideImage = { src: "/gallery/tarralipassa.kultachromi.vanne.webp", alt: "Kulta-chromi vanne" }
 
 const grid3 = [
-  { src: "/gallery/maalattu.kultainen.vanne.ylhaalta.png",  alt: "Kultainen vanne ylhäältä" },
-  { src: "/gallery/lippa.png",                              alt: "Lippa" },
-  { src: "/gallery/chrominen. pieni.vanne.png",             alt: "Chrominen pieni vanne" },
-  { src: "/gallery/valkoisetkeskiot.vanne.png",             alt: "Valkoiset keskiöt vanne" },
+  { src: "/gallery/maalattu.kultainen.vanne.ylhaalta.webp",  alt: "Kultainen vanne ylhäältä" },
+  { src: "/gallery/lippa.webp",                              alt: "Lippa" },
+  { src: "/gallery/chrominen. pieni.vanne.webp",             alt: "Chrominen pieni vanne" },
+  { src: "/gallery/valkoisetkeskiot.vanne.webp",             alt: "Valkoiset keskiöt vanne" },
 ]
 
 function GalleryGrid({ images }: { images: typeof grid1 }) {

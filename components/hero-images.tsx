@@ -12,7 +12,7 @@ const images = [
     href: "/kiilloitus",
   },
   {
-    src: "/images/maalaus.jpeg",
+    src: "/images/maalaus.webp",
     alt: "Jauhemaalattu vanne ennen ja jälkeen käsittelyn",
     label: "MAALAUS",
     aspect: "aspect-[4/5]",
@@ -33,7 +33,7 @@ const images = [
     href: "/vanteenkorjaus",
   },
   {
-    src: "/images/sandblasting.jpg",
+    src: "/images/sandblasting.webp",
     alt: "Oikaistu ja kiillotettu vanne valmiina toimitukseen",
     label: "LIAN POISTO",
     aspect: "aspect-[4/5]",

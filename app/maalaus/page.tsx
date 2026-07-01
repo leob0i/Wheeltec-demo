@@ -276,7 +276,7 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/maalaus.jpeg"
+              src="/images/maalaus.webp"
               alt="Maalattu vanne"
               fill
               className="object-cover"
@@ -446,7 +446,7 @@ function PrepSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/gallery/porsche.maalattujarrusatula.2.png"
+                src="/gallery/porsche.maalattujarrusatula.2.webp"
                 alt="Maalattu jarrusatula"
                 fill
                 className="object-cover"
@@ -454,7 +454,7 @@ function PrepSection() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/gallery/venttiilikoppa.glitteri.png"
+                src="/gallery/venttiilikoppa.glitteri.webp"
                 alt="Glitterimaalattu venttiilikoppa"
                 fill
                 className="object-cover"

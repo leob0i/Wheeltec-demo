@@ -34,7 +34,7 @@ export function Nav() {
         <div className="flex items-center anim-snap-in" style={d(150)}>
           <a href="/">
             <Image
-              src="/images/wt.logo.png"
+              src="/images/wt.logo.webp"
               alt="WheelTec logo"
               width={160}
               height={48}
@@ -93,9 +93,9 @@ export function Nav() {
 
           {/* Muut linkit */}
           {[
-            { label: "Hinnasto", href: "#hinnasto" },
+            { label: "Hinnasto", href: "/#hinnasto" },
             { label: "Galleria", href: "/galleria" },
-            { label: "Yhteystiedot", href: "#yhteystiedot" },
+            { label: "Yhteystiedot", href: "/#yhteystiedot" },
           ].map((item, i) => (
             <a
               key={item.label}
@@ -129,7 +129,7 @@ export function Nav() {
             EST. 2024
           </span>
           <a
-            href="#yhteystiedot"
+            href="/#yhteystiedot"
             className="relative font-mono text-[11px] md:text-[11px] text-background px-3 md:px-5 py-2 md:py-2.5 tracking-[0.15em] uppercase overflow-hidden group anim-snap-in min-h-[36px] md:min-h-[40px] flex items-center"
             style={{ ...d(350), background: "linear-gradient(90deg, #00F5C8, #009DFF)" }}
           >
@@ -170,9 +170,9 @@ export function Nav() {
           { label: "Vanteenoikaisu", href: "/vanteenoikaisu" },
           { label: "Vanteenkorjaus", href: "/vanteenkorjaus" },
           { label: "Maalinpoisto", href: "/maalinpoisto" },
-          { label: "Hinnasto",     href: "#hinnasto" },
+          { label: "Hinnasto",     href: "/#hinnasto" },
           { label: "Galleria",     href: "/galleria" },
-          { label: "Yhteystiedot", href: "#yhteystiedot" },
+          { label: "Yhteystiedot", href: "/#yhteystiedot" },
         ].map((item) => (
           <a
             key={item.label}

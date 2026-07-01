@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Image
-              src="/images/wt.logo.png"
+              src="/images/wt.logo.webp"
               alt="WheelTec"
               width={160}
               height={48}

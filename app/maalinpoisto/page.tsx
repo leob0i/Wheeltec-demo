@@ -82,7 +82,7 @@ function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 anim-cut-in" style={d(100)} aria-hidden="true">
         <Image
-          src="/images/sandblasting.jpg"
+          src="/images/sandblasting.webp"
           alt=""
           fill
           className="object-cover"
@@ -229,7 +229,7 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/jarrusatulat ennen ja jälkeen..png"
+              src="/images/jarrusatulat ennen ja jalkeen.webp"
               alt="Jarrusatulat ennen ja jälkeen maalinpoiston"
               fill
               className="object-cover"

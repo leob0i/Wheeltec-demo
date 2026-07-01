@@ -224,7 +224,7 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/vanneoikaisu.png"
+              src="/images/vanneoikaisu.webp"
               alt="Vanteen oikaisu"
               fill
               className="object-cover"
