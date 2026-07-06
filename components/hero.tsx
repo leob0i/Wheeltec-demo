@@ -153,7 +153,7 @@ export function Hero() {
       <div className="relative z-10 px-4 md:px-8 lg:px-12 pb-4 md:pb-6 hidden md:block">
         <div className="flex items-center justify-between max-w-[1400px] mx-auto w-full anim-cut-in" style={d(1000)}>
           <div className="flex items-center gap-6">
-            {["MA–PE 08–17", "LA 09–14", "SULJETTU SU"].map((info, i) => (
+            {["MA–PE 08–17", "SULJETTU LA", "SULJETTU SU"].map((info, i) => (
               <span key={info} className="font-mono text-[9px] text-foreground/40 tracking-[0.2em] uppercase">
                 {i > 0 && <span className="text-accent mr-6">/</span>}
                 {info}

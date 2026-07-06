@@ -219,15 +219,17 @@ function WhatIsSection() {
 
           {/* Right: image */}
           <div
-            className={`hidden lg:block relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
+            className={`relative aspect-[4/3] overflow-hidden transition-all duration-700 delay-300 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
             <Image
-              src="/images/vanneoikaisu.webp"
-              alt="Vanteen oikaisu"
+              src="/images/oikaisu.webp"
+              alt="Vääntynyt vanne oikaisulaitteessa ennen oikaisua"
               fill
-              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              loading="lazy"
+              className="object-cover object-top"
             />
           </div>
         </div>

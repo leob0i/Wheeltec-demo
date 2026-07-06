@@ -16,7 +16,7 @@ const palvelut = [
     id: "01",
     nimi: "Tärykiilloitus, vannesarja",
     hinta: "alk. 600 €",
-    img: "/images/kiilloitus.jpeg",
+    img: "/gallery/tarykiillotus.kesken.webp",
     kuvaus:
       "Koko sarjan tärykiilloitus antaa metallipinnalle tasaisen, peilimäisen lopputuloksen. Prosessi on pitkä — mutta se näkyy tuloksessa.",
   },

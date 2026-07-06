@@ -66,7 +66,7 @@ export function HeroImages() {
   const hiddenImages = images.slice(VISIBLE_COUNT)
 
   return (
-    <section ref={sectionRef} className="relative bg-background overflow-hidden">
+    <section id="palvelut" ref={sectionRef} className="relative bg-background overflow-hidden">
       {/* Top accent line */}
       <div
         className="absolute top-0 left-0 h-[2px] bg-accent transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]"

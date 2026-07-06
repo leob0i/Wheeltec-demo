@@ -34,9 +34,14 @@ export function Footer() {
               Navigoi
             </span>
             <nav className="flex flex-col gap-2 md:gap-3">
-              {["Palvelut", "Hinnasto", "Galleria", "Yhteystiedot", "Tarjous"].map((link) => (
-                <a key={link} href="#" className="font-mono text-[10px] md:text-xs text-muted-foreground hover:text-accent transition-colors tracking-[0.08em] md:tracking-[0.1em] py-0.5 min-h-[32px] flex items-center">
-                  {link}
+              {[
+                { label: "Palvelut", href: "/#palvelut" },
+                { label: "Hinnasto", href: "/#hinnasto" },
+                { label: "Galleria", href: "/galleria" },
+                { label: "Yhteystiedot", href: "/#yhteystiedot" },
+              ].map((link) => (
+                <a key={link.label} href={link.href} className="font-mono text-[10px] md:text-xs text-muted-foreground hover:text-accent transition-colors tracking-[0.08em] md:tracking-[0.1em] py-0.5 min-h-[32px] flex items-center">
+                  {link.label}
                 </a>
               ))}
             </nav>
@@ -56,6 +61,7 @@ export function Footer() {
                 <a href="mailto:info@wheeltec.fi" className="hover:text-accent transition-colors mt-1 break-all">
                   info@wheeltec.fi
                 </a>
+                <span>Y-tunnus: 3424747-4</span>
               </div>
             </div>
 
@@ -71,7 +77,7 @@ export function Footer() {
                 </div>
                 <div className="flex justify-between gap-4 max-w-[180px]">
                   <span>LA</span>
-                  <span>09:00 – 14:00</span>
+                  <span className="text-accent">SULJETTU</span>
                 </div>
                 <div className="flex justify-between gap-4 max-w-[180px]">
                   <span>SU</span>
@@ -83,11 +89,19 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-5 md:mt-16 pt-4 md:pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-4">
-          <span className="font-mono text-[8px] md:text-[10px] text-muted-foreground">
-            &copy; 2026 WHEELTEC. KAIKKI OIKEUDET PIDÄTETÄÄN.
-          </span>
-          <div className="flex items-center gap-4 md:gap-6">
+        <div className="mt-5 md:mt-16 pt-4 md:pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-3 items-center gap-2 md:gap-4">
+          <div className="flex flex-col items-center sm:items-start gap-1">
+            <span className="font-mono text-[8px] md:text-[10px] text-muted-foreground text-center sm:text-left">
+              &copy; 2026 WHEELTEC. KAIKKI OIKEUDET PIDÄTETÄÄN.
+            </span>
+            <a
+              href="/kayttoehdot"
+              className="font-mono text-[8px] md:text-[10px] text-muted-foreground hover:text-accent transition-colors text-center sm:text-left"
+            >
+              Tietosuoja- ja käyttöehdot
+            </a>
+          </div>
+          <div className="flex items-center justify-center gap-4 md:gap-6">
             {[
               { name: "Instagram", href: "https://www.instagram.com/wheeltec.oy/" },
               { name: "TikTok", href: "https://www.tiktok.com/@wheeltec.oy" },
@@ -103,6 +117,14 @@ export function Footer() {
               </a>
             ))}
           </div>
+          <a
+            href="https://www.leodigital.fi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[8px] md:text-[10px] text-muted-foreground hover:text-accent transition-colors text-center sm:text-right"
+          >
+            Kotisivut teki Leo Digital
+          </a>
         </div>
       </div>
 

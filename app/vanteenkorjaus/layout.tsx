@@ -6,13 +6,13 @@ const BASE = 'https://www.wheeltec.fi'
 
 export const metadata: Metadata = {
   title: 'Vanteenkorjaus – halkeamien TIG-hitsaus',
-  description: 'Korjaamme vanteiden halkeamat TIG-hitsauksella turvallisesti ja kestävästi. Tarkastus, oikaisu ja tasapaino tarvittaessa. WheelTec Lappeenranta.',
+  description: 'Korjaamme vanteiden halkeamat TIG-hitsauksella turvallisesti ja kestävästi. Teemme myös muut alumiini- ja erikoishitsaukset. WheelTec Lappeenranta.',
   alternates: {
     canonical: `${BASE}/vanteenkorjaus`,
   },
   openGraph: {
     title: 'Vanteenkorjaus – TIG-hitsaus | WheelTec',
-    description: 'Korjaamme vanteiden halkeamat TIG-hitsauksella turvallisesti ja kestävästi. Tarkastus, oikaisu ja tasapaino tarvittaessa.',
+    description: 'Korjaamme vanteiden halkeamat TIG-hitsauksella turvallisesti ja kestävästi. Teemme myös muut alumiini- ja erikoishitsaukset.',
     url: `${BASE}/vanteenkorjaus`,
     images: [
       {
@@ -30,7 +30,7 @@ const serviceSchema = {
   "@type": "Service",
   "name": "Vanteenkorjaus",
   "url": `${BASE}/vanteenkorjaus`,
-  "description": "Vanteiden halkeamien korjaus TIG-hitsauksella turvallisesti ja kestävästi. Jokainen korjaus tehdään niin, että lopputulos on mahdollisimman kestävä ja turvallinen ajokäyttöön.",
+  "description": "Vanteiden halkeamien korjaus TIG-hitsauksella turvallisesti ja kestävästi. Teemme myös muut alumiini- ja erikoishitsaukset. Jokainen korjaus tehdään niin, että lopputulos on mahdollisimman kestävä ja turvallinen ajokäyttöön.",
   "provider": { "@id": `${BASE}/#organization` },
   "serviceType": "Wheel Repair",
   "areaServed": { "@type": "Country", "name": "Finland" }

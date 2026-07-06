@@ -28,7 +28,7 @@ const grid2 = [
 const wideImage = { src: "/gallery/tarralipassa.kultachromi.vanne.webp", alt: "Kulta-chromi vanne" }
 
 const grid3 = [
-  { src: "/gallery/maalattu.kultainen.vanne.ylhaalta.webp",  alt: "Kultainen vanne ylhäältä" },
+  { src: "/gallery/moottorinosat.webp",                      alt: "Moottorin osat pintakäsittelyssä" },
   { src: "/gallery/lippa.webp",                              alt: "Lippa" },
   { src: "/gallery/chrominen. pieni.vanne.webp",             alt: "Chrominen pieni vanne" },
   { src: "/gallery/valkoisetkeskiot.vanne.webp",             alt: "Valkoiset keskiöt vanne" },

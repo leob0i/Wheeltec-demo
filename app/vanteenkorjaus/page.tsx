@@ -109,7 +109,7 @@ function HeroSection() {
             className="font-mono text-xs md:text-[13px] text-foreground/60 max-w-[260px] sm:max-w-xs md:max-w-md leading-relaxed anim-cut-in"
             style={d(800)}
           >
-            Korjaamme vanteiden halkeamat ja naarmut turvallisesti ja kestävästi.
+            Korjaamme vanteiden halkeamat ja naarmut turvallisesti sekä kestävästi. Teemme myös muutkin alumiini- ja erikoishitsaukset.
           </p>
 
           {/* CTAs */}
