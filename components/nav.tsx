@@ -75,6 +75,7 @@ export function Nav() {
                 {[
                   { label: "Kiilloitus", href: "/kiilloitus" },
                   { label: "Maalaus", href: "/maalaus" },
+                  { label: "Cerakote-pinnoitus", href: "/cerakote" },
                   { label: "Vanteenoikaisu", href: "/vanteenoikaisu" },
                   { label: "Vanteenkorjaus", href: "/vanteenkorjaus" },
                   { label: "Maalinpoisto", href: "/maalinpoisto" },
@@ -167,6 +168,7 @@ export function Nav() {
         {[
           { label: "Kiilloitus",   href: "/kiilloitus" },
           { label: "Maalaus",      href: "/maalaus" },
+          { label: "Cerakote-pinnoitus", href: "/cerakote" },
           { label: "Vanteenoikaisu", href: "/vanteenoikaisu" },
           { label: "Vanteenkorjaus", href: "/vanteenkorjaus" },
           { label: "Maalinpoisto", href: "/maalinpoisto" },

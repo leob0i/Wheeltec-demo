@@ -33,6 +33,13 @@ const images = [
     href: "/vanteenkorjaus",
   },
   {
+    src: "/images/cerakote.webp",
+    alt: "Cerakote-pinnoitettu jarrusatula",
+    label: "CERAKOTE",
+    aspect: "aspect-[3/4]",
+    href: "/cerakote",
+  },
+  {
     src: "/images/sandblasting.webp",
     alt: "Oikaistu ja kiillotettu vanne valmiina toimitukseen",
     label: "LIAN POISTO",
@@ -97,7 +104,7 @@ export function HeroImages() {
         {/* ── DESKTOP: grid-cols-3, kaikki kortit aina näkyvissä ── */}
         <div className="hidden md:grid grid-cols-3 gap-3 md:gap-5">
           {images.map((img, i) => {
-            const offsets = [0, 48, 16, 32, 64]
+            const offsets = [0, 48, 16, 32, 64, 24]
 
             const cardInner = (
               <div
