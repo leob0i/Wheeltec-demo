@@ -85,7 +85,7 @@ function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 anim-cut-in" style={d(100)} aria-hidden="true">
         <Image
-          src="/images/cerakote.webp"
+          src="/images/kerakotella.maalatut.jpg"
           alt=""
           fill
           className="object-cover"
@@ -217,7 +217,7 @@ function WhatIsSection() {
               }`}
             >
               <p className="font-mono text-[11px] md:text-sm text-foreground/60 leading-relaxed">
-                Wheeltec tarjoaa laadukkaat Cerakote-pinnoitukset erilaisille metalliosille, kuten vanteille, jarrusatuloille, moottoritilan osille, ripustuksen komponenteille, pakoputkiston osille sekä muille autojen ja moottoripyörien metallikomponenteille.
+                Wheeltec tarjoaa laadukkaat Cerakote-pinnoitukset erilaisille metalliosille, kuten jarrusatuloille, moottoritilan osille, ripustuksen komponenteille, pakoputkiston osille sekä muille autojen ja moottoripyörien metallikomponenteille.
               </p>
               <p className="font-mono text-[11px] md:text-sm text-foreground leading-relaxed">
                 Cerakote on erittäin kestävä keraamipohjainen pinnoite, joka suojaa pintaa korroosiolta, kulumiselta, kemikaaleilta ja UV-säteilyltä — tietyt tuotteet myös korkeilta lämpötiloilta.
@@ -247,7 +247,7 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/moottorinosat.jpeg"
+              src="/images/pakosarjat_yhdistetty.jpg"
               alt="Pinnoitetut moottorin metalliosat"
               fill
               className="object-cover"
