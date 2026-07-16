@@ -33,7 +33,7 @@ const images = [
     href: "/vanteenkorjaus",
   },
   {
-    src: "/images/pakosarja2.zoomattu.jpg",
+    src: "/images/pakosarja2.zoomattu.webp",
     alt: "Cerakote-pinnoitettu jarrusatula",
     label: "CERAKOTE",
     aspect: "aspect-[3/4]",

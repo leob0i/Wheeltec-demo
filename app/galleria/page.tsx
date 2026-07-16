@@ -31,7 +31,21 @@ const grid3 = [
   { src: "/gallery/moottorinosat.webp",                      alt: "Moottorin osat pintakäsittelyssä" },
   { src: "/gallery/lippa.webp",                              alt: "Lippa" },
   { src: "/gallery/chrominen. pieni.vanne.webp",             alt: "Chrominen pieni vanne" },
-  { src: "/gallery/valkoisetkeskiot.vanne.webp",             alt: "Valkoiset keskiöt vanne" },
+  { src: "/gallery/tarykiillotus.kesken.webp",                alt: "Tärykiillotus käynnissä" },
+]
+
+const grid4 = [
+  { src: "/gallery/maalatut.musta.hopea.vanteet.ennen.webp", alt: "Maalatut musta-hopea vanteet ennen käsittelyä" },
+  { src: "/gallery/maalattumustatvanteet.webp",              alt: "Maalatut mustat vanteet" },
+  { src: "/gallery/vanteet.ilman.lippoja.webp",              alt: "Vanteet ilman lippoja" },
+  { src: "/gallery/montahopealippavannetta.webp",            alt: "Hopeanvärisiä lippavanteita" },
+]
+
+const grid5 = [
+  { src: "/gallery/porshe.jarrusatula.vanne.webp",           alt: "Porsche jarrusatula ja vanne" },
+  { src: "/gallery/kiiltava.lippa.webp",                     alt: "Kiiltävä lippa" },
+  { src: "/gallery/cerakote.pakosarja.webp",                  alt: "Cerakote-pinnoitettu pakosarja" },
+  { src: "/gallery/pakosarja2.zoomattu.webp",                 alt: "Pakosarja lähikuvassa" },
 ]
 
 function GalleryGrid({ images }: { images: typeof grid1 }) {
@@ -285,6 +299,11 @@ export default function GalleriaPage() {
         </div>
       </section>
 
+      {/* ── GRID 4 – 4 kuvaa ── */}
+      <section aria-label="Galleria, osa 4">
+        <GalleryGrid images={grid4} />
+      </section>
+
       {/* ── GRID 2 – 4 kuvaa ── */}
       <section aria-label="Galleria, osa 2">
         <div
@@ -314,6 +333,11 @@ export default function GalleriaPage() {
       {/* ── GRID 3 – 4 kuvaa ── */}
       <section aria-label="Galleria, osa 3">
         <GalleryGrid images={grid3} />
+      </section>
+
+      {/* ── GRID 5 – 4 kuvaa ── */}
+      <section aria-label="Galleria, osa 5">
+        <GalleryGrid images={grid5} />
       </section>
 
 <div

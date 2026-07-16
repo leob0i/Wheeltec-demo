@@ -12,7 +12,6 @@ function d(ms: number): React.CSSProperties {
 }
 
 const kohteet = [
-  "Vanteet",
   "Jarrusatulat",
   "Moottoritilan osat",
   "Ripustuksen komponentit",
@@ -85,7 +84,7 @@ function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 anim-cut-in" style={d(100)} aria-hidden="true">
         <Image
-          src="/images/kerakotella.maalatut.jpg"
+          src="/images/kerakotella.maalatut.webp"
           alt=""
           fill
           className="object-cover"
@@ -247,7 +246,7 @@ function WhatIsSection() {
             }`}
           >
             <Image
-              src="/images/pakosarjat_yhdistetty.jpg"
+              src="/images/pakosarjat_yhdistetty.webp"
               alt="Pinnoitetut moottorin metalliosat"
               fill
               className="object-cover"
