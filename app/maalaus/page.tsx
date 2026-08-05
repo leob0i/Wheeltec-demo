@@ -360,16 +360,25 @@ function ServicesSection() {
                     </h3>
                   </div>
                   {p.kuvaus && (
-                    <p className="font-mono text-[9px] md:text-[11px] text-foreground/40 leading-relaxed pl-2.5 md:pl-5">
+                    <p
+                      className={`font-mono text-[9px] md:text-[11px] text-foreground/40 leading-relaxed pl-2.5 md:pl-5 ${
+                        p.id === "02" ? "hidden" : ""
+                      }`}
+                    >
                       {p.kuvaus}
                     </p>
                   )}
                 </div>
 
-                <div className="col-span-2 md:col-span-1 flex md:justify-end pl-8 md:pl-0 md:pt-1">
+                <div className="col-span-2 md:col-span-1 flex flex-col items-start md:items-end gap-1 pl-8 md:pl-0 md:pt-1">
                   <span className="font-sans text-xl md:text-2xl lg:text-3xl tracking-tighter text-accent">
                     {p.hinta}
                   </span>
+                  {p.kuvaus && p.id === "02" && (
+                    <p className="font-mono text-[9px] text-foreground/40 leading-relaxed">
+                      {p.kuvaus}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

@@ -15,7 +15,7 @@ const palvelut = [
   {
     id: "01",
     nimi: "Vanteen oikaisu",
-    hinta: "50–60 €",
+    hinta: "Alk 80€",
     kuvaus: "Suuntaa antava hinta normaalille heitolle.",
   },
   {

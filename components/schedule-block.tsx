@@ -32,7 +32,7 @@ const hinnasto: Record<
     { price: "ALK70€", name: "VANTEIDEN LIPPOJEN KIILLOTUS", paketti: "PER LIPPA", kesto: "KÄSIKONEELLA", paikat: 5 },
   ],
   OIKAISU: [
-    { price: "50–60€", name: "VANTEEN OIKAISU", paketti: "ALLE 1MM HEITTO", kesto: "ISOMMAT ALK80€", paikat: 5 },
+    { price: "Alk 80€", name: "VANTEEN OIKAISU", paketti: "ALLE 1MM HEITTO", kesto: "ISOMMAT ALK80€", paikat: 5 },
     { price: "15€", name: "VANTEIDEN SUORUUDEN TARKISTUS", paketti: "PER VANNE", kesto: "10€ KOKO SARJA", paikat: 5 },
   ],
 };
@@ -157,7 +157,11 @@ export function ScheduleBlock() {
               </div>
 
               <div className="flex items-center gap-2 md:gap-8 shrink-0">
-                <span className="font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em] hidden md:block">
+                <span
+                  className={`font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em] ${
+                    slot.name === "AUTON JARRUSATULAT" ? "block" : "hidden md:block"
+                  }`}
+                >
                   {slot.paketti}
                 </span>
                 <span className="font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em] hidden lg:block">
