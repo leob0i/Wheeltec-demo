@@ -132,7 +132,7 @@ export function ScheduleBlock() {
           {currentList.map((slot, i) => (
             <div
               key={`${activeCategory}-${slot.name}-${slot.paketti}-${i}`}
-              className={`flex items-center justify-between py-2.5 md:py-5 border-t border-foreground/5 group hover:bg-foreground/[0.02] transition-all px-0 md:px-4 ${
+              className={`flex flex-wrap items-center justify-between gap-y-1 py-2.5 md:py-5 border-t border-foreground/5 group hover:bg-foreground/[0.02] transition-all px-0 md:px-4 ${
                 visible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-3"
@@ -156,18 +156,20 @@ export function ScheduleBlock() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 md:gap-8 shrink-0">
-                <span
-                  className={`font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em] ${
-                    slot.name === "AUTON JARRUSATULAT" ? "block" : "hidden md:block"
-                  }`}
-                >
-                  {slot.paketti}
-                </span>
-                <span className="font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em] hidden lg:block">
-                  {slot.kesto}
-                </span>
-              </div>
+              {(slot.paketti || slot.kesto) && (
+                <div className="flex items-center gap-2 md:gap-8 shrink-0 w-full md:w-auto pl-8 md:pl-0">
+                  {slot.paketti && (
+                    <span className="font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em]">
+                      {slot.paketti}
+                    </span>
+                  )}
+                  {slot.kesto && (
+                    <span className="font-mono text-[7px] md:text-[9px] text-foreground/30 tracking-[0.1em]">
+                      {slot.kesto}
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
