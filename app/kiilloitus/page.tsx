@@ -387,8 +387,8 @@ function ServicesSection() {
             visible ? "opacity-100 delay-700" : "opacity-0"
           }`}
         >
-          <span className="font-mono text-[6px] md:text-[10px] text-foreground/25 tracking-[0.1em] md:tracking-[0.2em]">
-            HINNAT ALV 0%
+          <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.1em] md:tracking-[0.2em]">
+            Hinnat alkaen, kysy tarjous!
           </span>
           <span className="font-mono text-[6px] md:text-[10px] text-foreground/25 tracking-[0.1em] md:tracking-[0.2em] hidden md:block">
             Hinnat ovat suuntaa-antavia. Lopullinen hinta sovitaan arvion perusteella.

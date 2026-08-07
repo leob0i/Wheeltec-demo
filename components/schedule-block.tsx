@@ -177,8 +177,8 @@ export function ScheduleBlock() {
         <div
           className={`flex items-center justify-between pt-1.5 md:pt-4 transition-all duration-700 ${visible ? "opacity-100 delay-700" : "opacity-0"}`}
         >
-          <span className="font-mono text-[6px] md:text-[10px] text-foreground/25 tracking-[0.08em] md:tracking-[0.2em]">
-            HINNAT ALV 0%
+          <span className="font-mono text-[9px] md:text-[10px] text-accent tracking-[0.08em] md:tracking-[0.2em]">
+            Hinnat alkaen, kysy tarjous!
           </span>
           <span className="font-mono text-[6px] md:text-[10px] text-foreground/25 tracking-[0.08em] md:tracking-[0.2em] hidden md:block">
             TARKKA HINTA ARVION MUKAAN
